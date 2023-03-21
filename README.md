@@ -10,7 +10,7 @@ All passwords, ssh keys etc. will be stored on this README.md file as well as mo
 
 # stack
 we are using the following stack: <br>
-Next.Js for front end work <br>
+React.Js for front end work <br>
 Express.js and Node.js as our server<br>
 mongodb as our backend<br>
 Azure as our deployment environment<br>
