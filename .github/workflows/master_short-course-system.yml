@@ -1,39 +1,4 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Codespaces
-Marketplace
-Explore
- 
-@ItsJustSbu 
-ItsJustSbu
-/
-Short-Course-System
-Private
-Cannot fork because you own this repository and are not a member of any organizations.
-Code
-Issues
-1
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-Short-Course-System/.github/workflows/master_short-course-system.yml
-@ItsJustSbu
-ItsJustSbu Add or update the Azure App Service build and deployment workflow config
-Latest commit 8f7c67f 5 minutes ago
- History
- 1 contributor
-56 lines (46 sloc)  1.44 KB
-
-# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
-# More GitHub Actions for Azure: https://github.com/Azure/actions
-
-name: short-course-system
+name: Build and deploy Node.js app to Azure Web App - short-course-system
 
 on:
   push:
@@ -88,18 +53,3 @@ jobs:
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DF94A7732128460C9940A49C737523A2 }}
           package: ./short-course-system
-Footer
-© 2023 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Short-Course-System/master_short-course-system.yml at master · ItsJustSbu/Short-Course-System
