@@ -21,3 +21,6 @@ Taiga as our project Management tool<br>
 gmail - username : cacheincacheout01@gmail.com password:softwaredesign1<br>
 mongodb - to log into mongodb, please log into the cacheincacheout account on gmail and then sign in using google<br>
 mongodb atlas database deployment - username :cacheincacheout1 password:p2VDsQxwNUMtZlEQ<br>
+
+##workflow badge
+[![.github/workflows/master_short-course-system.yml](https://github.com/ItsJustSbu/Short-Course-System/actions/workflows/master_short-course-system.yml/badge.svg?branch=master)](https://github.com/ItsJustSbu/Short-Course-System/actions/workflows/master_short-course-system.yml)
