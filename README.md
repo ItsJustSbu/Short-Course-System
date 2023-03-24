@@ -1,3 +1,6 @@
+[![.github/workflows/master_short-course-system.yml](https://github.com/ItsJustSbu/Short-Course-System/actions/workflows/master_short-course-system.yml/badge.svg?branch=master)](https://github.com/ItsJustSbu/Short-Course-System/actions/workflows/master_short-course-system.yml)
+
+
 # Softeware-Design-Project
 This is our working Repo<br>
 I have initialized npm as well as created a Next.Js App using npx create-react-app<br>
@@ -22,5 +25,4 @@ gmail - username : cacheincacheout01@gmail.com password:softwaredesign1<br>
 mongodb - to log into mongodb, please log into the cacheincacheout account on gmail and then sign in using google<br>
 mongodb atlas database deployment - username :cacheincacheout1 password:p2VDsQxwNUMtZlEQ<br>
 
-##workflow badge
-[![.github/workflows/master_short-course-system.yml](https://github.com/ItsJustSbu/Short-Course-System/actions/workflows/master_short-course-system.yml/badge.svg?branch=master)](https://github.com/ItsJustSbu/Short-Course-System/actions/workflows/master_short-course-system.yml)
+
