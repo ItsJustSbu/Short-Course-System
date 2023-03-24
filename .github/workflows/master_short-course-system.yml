@@ -27,7 +27,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: node-app
-          path: ./short-course-system
+          path: /short-course-system
 
 
 
@@ -52,4 +52,4 @@ jobs:
           app-name: 'short-course-system'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DF94A7732128460C9940A49C737523A2 }}
-          package: ./short-course-system
+          package: /short-course-system
