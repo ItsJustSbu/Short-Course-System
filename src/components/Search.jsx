@@ -1,8 +1,12 @@
 function Search(){
 
     return(
-        <div className="mr-[350px] pb-[50px] justify-start items-start">
-        This is a search bar
+        <div className="flex mr-[200px] pb-[10px] mb-[16px] justify-start items-start w-fit">
+            <input placeholder="search..." className="rounded-[40px] w-[300px] pl-[10px] pb-[5px]">
+                
+            </input>
+            
+            
         </div>
     )
 
