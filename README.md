@@ -1,4 +1,4 @@
-[![.github/workflows/master_short-course-system.yml](https://github.com/ItsJustSbu/Short-Course-System/actions/workflows/master_short-course-system.yml/badge.svg?branch=master)](https://github.com/ItsJustSbu/Short-Course-System/actions/workflows/master_short-course-system.yml)
+[![Build and deploy Node.js app to Azure Web App - short-course-system](https://github.com/ItsJustSbu/Short-Course-System/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/ItsJustSbu/Short-Course-System/actions/workflows/main.yml)
 
 
 # Softeware-Design-Project
