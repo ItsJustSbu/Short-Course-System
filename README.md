@@ -3,7 +3,6 @@
 
 # Softeware-Design-Project
 This is our working Repo<br>
-I have initialized npm as well as created a Next.Js App using npx create-react-app<br>
 
 # How to use this repo
 pull this repo into your local repository. ensure to create your own branches to work on whatever you are working on.<br>
