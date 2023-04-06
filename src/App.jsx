@@ -4,11 +4,11 @@ import CoursesGrid from './CoursesGrid';
 function App() {
 
   return (
-    <div className='grid grid-rows-2'>
+    <div>
     <div>
     <Home />
     </div>
-    <div className='items-end'>
+    <div>
     <CoursesGrid />
     </div>
     
