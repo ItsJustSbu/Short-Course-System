@@ -12,7 +12,7 @@ const products = [
         color: 'Dr Sarah Kapay',
     },
     {
-        id: 1,
+        id: 2,
         name: 'Introduction to React.js',
         href: '#',
         imageSrc: './assets/search-icon.webp',
@@ -21,7 +21,7 @@ const products = [
         color: 'Dr Sarah Kapay',
     },
     {
-        id: 1,
+        id: 3,
         name: 'Introduction to React.js',
         href: '#',
         imageSrc: './assets/search-icon.webp',
@@ -30,7 +30,7 @@ const products = [
         color: 'Dr Sarah Kapay',
     },
     {
-        id: 1,
+        id: 4,
         name: 'Introduction to React.js',
         href: '#',
         imageSrc: './assets/search-icon.webp',
@@ -39,7 +39,7 @@ const products = [
         color: 'Dr Sarah Kapay',
     },
     {
-        id: 1,
+        id: 5,
         name: 'Introduction to React.js',
         href: '#',
         imageSrc: './assets/search-icon.webp',
@@ -47,9 +47,6 @@ const products = [
         price: '$35',
         color: 'Dr Sarah Kapay',
     },
-
-    
-
 ]
 
 export default function Example() {
