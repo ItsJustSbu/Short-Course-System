@@ -1,4 +1,4 @@
-[![Azure Static Web Apps CI/CD](https://github.com/ItsJustSbu/Short-Course-System/actions/workflows/azure-static-web-apps-salmon-mushroom-013797a10.yml/badge.svg)](https://github.com/ItsJustSbu/Short-Course-System/actions/workflows/azure-static-web-apps-salmon-mushroom-013797a10.yml)
+[![Azure Static Web Apps CI/CD](https://github.com/ItsJustSbu/Short-Course-System/actions/workflows/azure-static-web-apps-salmon-mushroom-013797a10.yml/badge.svg?branch=master)](https://github.com/ItsJustSbu/Short-Course-System/actions/workflows/azure-static-web-apps-salmon-mushroom-013797a10.yml)
 
 
 # Softeware-Design-Project
