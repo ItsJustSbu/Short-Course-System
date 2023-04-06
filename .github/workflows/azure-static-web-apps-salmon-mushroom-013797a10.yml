@@ -3,11 +3,11 @@ name: Azure Static Web Apps CI/CD
 on:
   push:
     branches:
-      - components
+      - master
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches:
-      - components
+      - master
 
 jobs:
   build_and_deploy_job:
@@ -33,6 +33,8 @@ jobs:
           ###### End of Repository/Build Configurations ######
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
+        with:
+          token: ${{secrets.CODECOV_TOKEN}}
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
