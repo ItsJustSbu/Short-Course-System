@@ -1,5 +1,9 @@
 import React , {useState} from "react";
+import App from './App'
 
+function Display(){
+    return <App />;
+}
 
 
 
@@ -32,7 +36,7 @@ export const Registration = (props) =>{
             <input value={pass} onChange={(e)=>setPass(e.target.value)}type="Password"placeholder="************" id="Password" name="Password" />
             <label htmlFor="Password Verification">Password Verification</label>
             <input value={passverify} onChange={(e)=>setPassVerify(e.target.value)}type="Password"placeholder="***********" id="Password Verification" name="Password Verification"/>
-            <button type="submit">Register</button>
+            <button onClick={()=>this.Display}>Register</button>
 
         </form>
         <button className="link-btn" onClick={()=>props.onFormSwitch('login')}>Already have an Account?Login here </button>
