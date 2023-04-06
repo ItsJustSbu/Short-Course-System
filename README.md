@@ -19,9 +19,6 @@ Azure as our deployment environment<br>
 Github Actions as our CI/CD tool<br>
 Taiga as our project Management tool<br>
 
-## Accounts and Passwords
-gmail - username : cacheincacheout01@gmail.com password:softwaredesign1<br>
-mongodb - to log into mongodb, please log into the cacheincacheout account on gmail and then sign in using google<br>
-mongodb atlas database deployment - username :cacheincacheout1 password:p2VDsQxwNUMtZlEQ<br>
+
 
 
