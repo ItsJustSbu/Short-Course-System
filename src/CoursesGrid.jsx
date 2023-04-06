@@ -1,11 +1,11 @@
 
-import image1 from './assets/react.svg'
+import image1 from './assets/video-placeholder.jpg'
 
 const products = [
     {
         id: 1,
         name: 'Introduction to React.js',
-        href: '#',
+        href: 'https://youtu.be/dQw4w9WgXcQ',
         imageSrc: './assets/search-icon.webp',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$35',
@@ -14,7 +14,7 @@ const products = [
     {
         id: 2,
         name: 'Introduction to React.js',
-        href: '#',
+        href: 'https://youtu.be/dQw4w9WgXcQ',
         imageSrc: './assets/search-icon.webp',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$35',
@@ -23,7 +23,7 @@ const products = [
     {
         id: 3,
         name: 'Introduction to React.js',
-        href: '#',
+        href: 'https://youtu.be/dQw4w9WgXcQ',
         imageSrc: './assets/search-icon.webp',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$35',
@@ -32,7 +32,7 @@ const products = [
     {
         id: 4,
         name: 'Introduction to React.js',
-        href: '#',
+        href: 'https://youtu.be/dQw4w9WgXcQ',
         imageSrc: './assets/search-icon.webp',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$35',
@@ -41,7 +41,52 @@ const products = [
     {
         id: 5,
         name: 'Introduction to React.js',
-        href: '#',
+        href: 'https://youtu.be/dQw4w9WgXcQ',
+        imageSrc: './assets/search-icon.webp',
+        imageAlt: "Front of men's Basic Tee in black.",
+        price: '$35',
+        color: 'Dr Sarah Kapay',
+    },
+    {
+        id: 6,
+        name: 'Introduction to React.js',
+        href: 'https://youtu.be/dQw4w9WgXcQ',
+        imageSrc: './assets/search-icon.webp',
+        imageAlt: "Front of men's Basic Tee in black.",
+        price: '$35',
+        color: 'Dr Sarah Kapay',
+    },
+    {
+        id: 7,
+        name: 'Introduction to React.js',
+        href: 'https://youtu.be/dQw4w9WgXcQ',
+        imageSrc: './assets/search-icon.webp',
+        imageAlt: "Front of men's Basic Tee in black.",
+        price: '$35',
+        color: 'Dr Sarah Kapay',
+    },
+    {
+        id: 8,
+        name: 'Introduction to React.js',
+        href: 'https://youtu.be/dQw4w9WgXcQ',
+        imageSrc: './assets/search-icon.webp',
+        imageAlt: "Front of men's Basic Tee in black.",
+        price: '$35',
+        color: 'Dr Sarah Kapay',
+    },
+    {
+        id: 9,
+        name: 'Introduction to React.js',
+        href: 'https://youtu.be/dQw4w9WgXcQ',
+        imageSrc: './assets/search-icon.webp',
+        imageAlt: "Front of men's Basic Tee in black.",
+        price: '$35',
+        color: 'Dr Sarah Kapay',
+    },
+    {
+        id: 10,
+        name: 'Introduction to React.js',
+        href: 'https://youtu.be/dQw4w9WgXcQ',
         imageSrc: './assets/search-icon.webp',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$35',
@@ -51,7 +96,7 @@ const products = [
 
 export default function Example() {
 return (
-<div className="bg-white">
+<div>
     <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
         <h2 className="text-2xl font-bold tracking-tight text-gray-900"></h2>
 
@@ -65,15 +110,15 @@ return (
                 </div>
                 <div className="mt-4 flex justify-between">
                     <div>
-                        <h3 className="text-sm text-gray-700">
+                        <h3 className="text-sm text-gray-200">
                             <a href={product.href}>
                                 <span aria-hidden="true" className="absolute inset-0" />
                                 {product.name}
                             </a>
                         </h3>
-                        <p className="mt-1 text-sm text-gray-500">{product.color}</p>
+                        <p className="mt-1 text-sm text-gray-200">{product.color}</p>
                     </div>
-                    <p className="text-sm font-medium text-gray-900">{product.price}</p>
+                    <p className="text-sm font-medium text-gray-200">{product.price}</p>
                 </div>
             </div>
             ))}
