@@ -4,11 +4,12 @@ import mongoose from 'mongoose';
 import routes from '../backend/Routes/routes.js';
 const app = express();
 
-let uri = 'mongodb+srv://cacheincacheout01:p2VDsQxwNUMtZlEQ@softwaredesignproject.lmdwpma.mongodb.net/?retryWrites=true&w=majority'; 
+let uri = 'mongodb+srv://cacheincacheout01:p2VDsQxwNUMtZlEQ@softwaredesignproject.lmdwpma.mongodb.net/?retryWrites=true&w=majority/';
 
 //connecting mongoose
 mongoose.Promise = global.Promise;
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+const db = mongoose.connection;
 
 //bodyParser
 app.use(bodyParser.urlencoded({ extended: true }));
