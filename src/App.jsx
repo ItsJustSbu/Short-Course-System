@@ -18,6 +18,7 @@ function App() {
       <Route path="/watch" element={<VideoPage />} />
       <Route path="/chat" element={<ChatApp />} />
       
+      
     </Routes>
     </>
     

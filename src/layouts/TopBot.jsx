@@ -6,11 +6,11 @@ const TopBot = ({
     const[top,bottom] = children;
   return (
     <>
-        <div className="flex flex-col">
-           <div className="flex border-b-2 border-pink-500">
+        <div className="flex flex-col h-full">
+           <div className="shrink border-b-2 border-pink-500">
                 {top}
             </div> 
-            <div className="flex border-4 border-transparent">
+            <div className="grow border-4 border-transparent ">
                 {bottom}
             </div>
         </div>
