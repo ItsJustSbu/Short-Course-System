@@ -1,4 +1,4 @@
-const addNewMessage = require('../controller/SendMessageController');
+import addNewMessage from '../controller/SendMessageController.js'
 
 const Routes = (app) =>{
     app.route('/message')

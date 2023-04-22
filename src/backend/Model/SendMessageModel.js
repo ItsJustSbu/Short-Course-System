@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
 
@@ -7,4 +7,6 @@ const SendMessageSchema = new Schema({
     message: String,
     created_date: { type: Date, default: Date.now }
 });
+
+export default SendMessageSchema;
 

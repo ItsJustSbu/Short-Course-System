@@ -1,8 +1,7 @@
 import bodyParser from 'body-parser';
 import express from 'express';
 import mongoose from 'mongoose';
-
-// const routes = require('./Routes/routes.js');
+import routes from '../backend/Routes/routes.js';
 const app = express();
 
 let uri = 'mongodb+srv://cacheincacheout01:p2VDsQxwNUMtZlEQ@softwaredesignproject.lmdwpma.mongodb.net/?retryWrites=true&w=majority'; 
@@ -16,9 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 //routes are here
-// const route = routes(app);
-// route();
-
+routes(app);
 
 // start the Express server
 app.listen(3000, () => {

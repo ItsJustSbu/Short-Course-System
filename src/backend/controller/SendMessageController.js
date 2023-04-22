@@ -1,6 +1,6 @@
+import SendMessageSchema from '../Model/SendMessageModel.js';
+import mongoose from 'mongoose';
 
-const SendMessageSchema  = require("../Model/SendMessageModel");
-const mongoose = require('mongoose');
 
 const sendMessage = mongoose.model('sendMessage', SendMessageSchema);
 
@@ -10,3 +10,4 @@ function addNewMessage(req, res){
     newMessage.save().then((result)=>res.json(result)).catch((e)=>res.send(e));
 }
 
+export default addNewMessage;
