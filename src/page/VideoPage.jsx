@@ -22,7 +22,7 @@ function VideoPage(){
                                 <label className="flex-none block mb-2 text-sm font-medium text-gray-400 dark:text-white">Your Notes</label>
                             </div>
                             <div className="grow w-full h-full">
-                                <textarea rows="8" className="resize-none hover:resize block p-2.5 w-full h-full rounded-md border-8 bg-gray-900 border-gray-900 text-slate-200" placeholder="Write your notes here...">
+                                <textarea rows="8" className="resize-none hover:resize block p-2.5 w-full h-full max-h-[570px] max-w-[700px] rounded-md border-8 bg-gray-900 border-gray-900 text-slate-200" placeholder="Write your notes here...">
                                
                                 </textarea>
                             </div>
