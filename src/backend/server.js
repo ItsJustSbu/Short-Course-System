@@ -2,9 +2,11 @@ import bodyParser from 'body-parser';
 import express from 'express';
 import mongoose from 'mongoose';
 import routes from '../backend/Routes/routes.js';
+import cors from 'cors';
 const app = express();
+app.use(cors());
 
-let uri = 'mongodb+srv://cacheincacheout01:p2VDsQxwNUMtZlEQ@softwaredesignproject.lmdwpma.mongodb.net/?retryWrites=true&w=majority'; 
+let uri = 'mongodb+srv://cacheincacheout01:p2VDsQxwNUMtZlEQ@softwaredesignproject.lmdwpma.mongodb.net/software_database'; 
 
 //connecting mongoose
 mongoose.Promise = global.Promise;
