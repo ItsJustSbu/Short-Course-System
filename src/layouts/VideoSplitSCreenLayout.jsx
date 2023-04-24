@@ -5,7 +5,7 @@ function VideoSplitScreen({children}){
     const [left, right] = children; 
     return(
         <>
-            <div class="resize-none flex flex-col border-2 border-white rounded-lg">
+            <div className="resize-none flex flex-col border-2 border-white rounded-lg">
                 {/* <header className=" text-center bg-gradient-to-r from-cyan-500 to-blue-700">Head</header> */}
                 <div className="flex">
                     <div className="flex-1 border-2 border-pink">

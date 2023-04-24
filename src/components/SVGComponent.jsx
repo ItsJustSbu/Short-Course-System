@@ -2,9 +2,13 @@
 function SVGComponent({svg}){
 
     return(
+        <>
         <div className="resize">
             {svg}
         </div>
+        
+        </>
+        
         
     ) ;
 }
