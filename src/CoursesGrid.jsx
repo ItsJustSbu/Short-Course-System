@@ -5,7 +5,7 @@ const products = [
     {
         id: 1,
         name: 'Introduction to React.js',
-        href: 'https://youtu.be/dQw4w9WgXcQ',
+        href: '/list',
         imageSrc: './assets/search-icon.webp',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$35',
@@ -14,7 +14,7 @@ const products = [
     {
         id: 2,
         name: 'Introduction to React.js',
-        href: 'https://youtu.be/dQw4w9WgXcQ',
+        href: '/list',
         imageSrc: './assets/search-icon.webp',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$35',
@@ -23,7 +23,7 @@ const products = [
     {
         id: 3,
         name: 'Introduction to React.js',
-        href: 'https://youtu.be/dQw4w9WgXcQ',
+        href: '/list',
         imageSrc: './assets/search-icon.webp',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$35',
@@ -32,7 +32,7 @@ const products = [
     {
         id: 4,
         name: 'Introduction to React.js',
-        href: 'https://youtu.be/dQw4w9WgXcQ',
+        href: '/list',
         imageSrc: './assets/search-icon.webp',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$35',
@@ -41,7 +41,7 @@ const products = [
     {
         id: 5,
         name: 'Introduction to React.js',
-        href: 'https://youtu.be/dQw4w9WgXcQ',
+        href: '/list',
         imageSrc: './assets/search-icon.webp',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$35',
@@ -50,7 +50,7 @@ const products = [
     {
         id: 6,
         name: 'Introduction to React.js',
-        href: 'https://youtu.be/dQw4w9WgXcQ',
+        href: '/list',
         imageSrc: './assets/search-icon.webp',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$35',
@@ -59,7 +59,7 @@ const products = [
     {
         id: 7,
         name: 'Introduction to React.js',
-        href: 'https://youtu.be/dQw4w9WgXcQ',
+        href: '/list',
         imageSrc: './assets/search-icon.webp',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$35',
@@ -68,7 +68,7 @@ const products = [
     {
         id: 8,
         name: 'Introduction to React.js',
-        href: 'https://youtu.be/dQw4w9WgXcQ',
+        href: '/list',
         imageSrc: './assets/search-icon.webp',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$35',
@@ -77,7 +77,7 @@ const products = [
     {
         id: 9,
         name: 'Introduction to React.js',
-        href: 'https://youtu.be/dQw4w9WgXcQ',
+        href: '/list',
         imageSrc: './assets/search-icon.webp',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$35',
@@ -86,7 +86,7 @@ const products = [
     {
         id: 10,
         name: 'Introduction to React.js',
-        href: 'https://youtu.be/dQw4w9WgXcQ',
+        href: '/list',
         imageSrc: './assets/search-icon.webp',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$35',

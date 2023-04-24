@@ -1,13 +1,12 @@
-import SendMessageSchema from '../Model/SendMessageModel.js';
 import mongoose from 'mongoose';
+import ChatAppModel from '../Model/ChatAppModel.js';
 
+const sendMessage = mongoose.model('sendMessage', ChatAppModel);
 
-const sendMessage = mongoose.model('sendMessage', SendMessageSchema);
-
-function addNewMessage(req, res){
+function SendMessage(req, res){
     let newMessage = new sendMessage(req.body);
 
     newMessage.save().then((result)=>res.json(result)).catch((e)=>res.send(e));
 }
 
-export default addNewMessage;
+export default SendMessage;

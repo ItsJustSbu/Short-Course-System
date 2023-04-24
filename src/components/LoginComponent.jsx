@@ -39,8 +39,12 @@ function LoginComponent(){
         if(response.data === null){
             alert('invalid credentials');
         }else{
-            console.log(response.data);
-            navigate('/', {replace: true})
+            
+            //This is how you pass data to another page
+            navigate('/home', {
+                id: response.data._id,
+                name:response.data.name
+            });
         }
         
     }
