@@ -4,7 +4,8 @@ import HomePage from './page/HomePage';
 import RegistrationPage from './page/RegistrationPage';
 import LoginPage from './page/LoginPage';
 import VideoPage from './page/VideoPage';
-import MyLearning from './page/MyLearning';
+import MyLearning from './page/MyLearning';import CourseInfoPage from "./page/CourseInfoPage";
+
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
       <Route path="/watch" element={<VideoPage />} />
       <Route path="/list" element={<MyLearning />} />
       
+      <Route path="/course-info" element={<CourseInfoPage/>} />
     </Routes>
     </>
     
@@ -24,3 +26,5 @@ function App() {
 }
 
 export default App
+
+
