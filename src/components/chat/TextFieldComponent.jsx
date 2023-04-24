@@ -3,6 +3,7 @@ import SendIcon from "@mui/icons-material/Send"
 import LeftHandComponent from "./LeftHandTextComponent";
 import RightHandTextComponent from "./RightHandTextComponent";
 
+
 function TextFieldComponent(){
     return(
         <div className="relative w-full h-[50vh] bg-[#252e42]">
@@ -16,6 +17,8 @@ function TextFieldComponent(){
         <Input label="Lets Chat 💬" color="purple" text="placeholder-white" 
         className="text-base text-white"
         />
+
+
         <div className="ml-[15px]">
           <IconButton color="purple" onClick={()=>{alert("button has been clicked")}}>
             <SendIcon/>
