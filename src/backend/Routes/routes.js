@@ -1,13 +1,8 @@
 import registerUser from '../controller/RegisterUser.js';
-import addNewMessage from '../controller/SendMessageController.js'
+import SendMessageController from '../controller/SendMessageController.js';
 import RetrieveUser from '../controller/RetrieveUser.js'
 
 const Routes = (app) =>{
-    app.route('/message')
-    .get((req,res)=>{
-        res.send('GET request successful');
-    })
-    .post(addNewMessage)
 
     app.route('/registerUser')
     .get((req, res)=>{
@@ -21,6 +16,12 @@ const Routes = (app) =>{
         res.send('Login Successful');
     })
     .post(RetrieveUser)
+
+    app.route('/chat')
+    .get((req, res)=>{
+        res.send('Chat Successful');
+    })
+    .post(SendMessageController)
 }
 
 
