@@ -1,6 +1,7 @@
 import Home from "../Home"
 import CoursesGrid from '../CoursesGrid';
 
+
 function HomePage() {
 
   return (

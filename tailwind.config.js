@@ -11,6 +11,9 @@ module.exports = withMT({
         'dark-purple': '#2C354A',
         'light-purple': '#D101F3'
       },
+      backgroundImage: {
+        'course-background': "url(course.svg)"
+      }
     }
   },
   plugins: [
