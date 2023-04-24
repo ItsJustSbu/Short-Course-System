@@ -1,6 +1,6 @@
+import TextFieldComponent from "../components/chat/TextFieldComponent";
 import SplitscreenLayout from "../layouts/SplitScreenLayout";
-import { Input } from "@material-tailwind/react";
-import SendIcon from "@mui/icons-material/Send"
+
 
 function ChatApp(){
 
@@ -8,11 +8,10 @@ function ChatApp(){
     <div className="w-full h-full">
       <SplitscreenLayout>
     <h1>This is the first part</h1>
-    <div className="flex w-full h-[50vh] bg-gray-50">
-      <div className="justify-center w-5/6">
-        <Input label=" Input with Icon" icon={<SendIcon />} />
-      </div>
+    <div>
+    <TextFieldComponent />
     </div>
+    
   </SplitscreenLayout>
 
     </div>
