@@ -1,4 +1,4 @@
-[![Azure Static Web Apps CI/CD](https://github.com/ItsJustSbu/Short-Course-System/actions/workflows/azure-static-web-apps-orange-pond-03a327710.yml/badge.svg)](https://github.com/ItsJustSbu/Short-Course-System/actions/workflows/azure-static-web-apps-orange-pond-03a327710.yml)
+
 ![codecov](https://img.shields.io/badge/coverage-100%25-red)
 
 # Softeware-Design-Project
