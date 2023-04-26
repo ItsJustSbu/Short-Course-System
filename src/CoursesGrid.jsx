@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom'
 import image1 from './assets/video-placeholder.jpg'
 
 const products = [
@@ -77,7 +77,7 @@ const products = [
     {
         id: 9,
         name: 'Introduction to React.js',
-        href: '/list',
+        // href: {link },
         imageSrc: './assets/search-icon.webp',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$35',
@@ -94,7 +94,7 @@ const products = [
     },
 ]
 
-export default function Example() {
+export default function Example({state}) {
 return (
 <div>
     <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
@@ -111,10 +111,11 @@ return (
                 <div className="mt-4 flex justify-between">
                     <div>
                         <h3 className="text-sm text-gray-200">
-                            <a href={product.href}>
+                            <Link to ="/course-info" state={{state}}>
                                 <span aria-hidden="true" className="absolute inset-0" />
                                 {product.name}
-                            </a>
+                                </Link>
+                            
                         </h3>
                         <p className="mt-1 text-sm text-gray-200">{product.color}</p>
                     </div>
