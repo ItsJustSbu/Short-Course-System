@@ -14,3 +14,7 @@ export function UpdateMyCourses(req,res){
     mycoursesModel.updateOne({email: req.body.email}, {$set: {mycourses: req.body.mycourses}}).then((result)=>res.json(result)).catch((e)=>res.send(e));
 }
 
+export function GetMyCourses(req,res){
+    mycoursesModel.find({email: req.params.email}).then((result)=>res.json(result)).catch((e)=>res.send(e));
+}
+

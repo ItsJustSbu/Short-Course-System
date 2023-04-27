@@ -1,6 +1,8 @@
 import registerUser from '../controller/RegisterUser.js';
 import SendMessageController from '../controller/SendMessageController.js';
 import RetrieveUser from '../controller/RetrieveUser.js'
+import {AddMyCourses, UpdateMyCourses,GetMyCourses} from '../controller/MyCoursesController.js'
+import {CreateCourse, UpdateClasses,GetClasses} from '../controller/CoursesController.js'
 
 const Routes = (app) =>{
 
@@ -23,30 +25,42 @@ const Routes = (app) =>{
     })
     .post(SendMessageController)
 
-    app.route('/mycourses')
+    app.route('/mycourses') // registering 
     .get((req, res)=>{
         res.send('Course Successfully Added');
     })
     .post(AddMyCourses)
 
-    app.route('/Updatemycourses')
+    app.route('/Updatemycourses') // enroll in a course 
     .get((req, res)=>{
         res.send('Course Successfully Updated');
     })
     .post(UpdateMyCourses)
 
-
-    app.route('/addcourse')
+    app.route('/Getmycourses')
     .get((req, res)=>{
-        res.send('Course Successfully Added');
+        res.send('Course Successfully Retrieved');
     })
-    .post(AddCourse)
+    .post(GetMyCourses)
 
-    app.route('/Updateclasses')
+
+    app.route('/createcourse') //create a course from studio
+    .get((req, res)=>{
+        res.send('Course Successfully Created');
+    })
+    .post(CreateCourse)
+
+    app.route('/Updateclasses') // add classes to a course from studio
     .get((req, res)=>{
         res.send('Classes Successfully Updated');
     })
     .post(UpdateClasses)
+
+    app.route('/Getclasses')
+    .get((req, res)=>{
+        res.send('Classes Successfully Retrieved');
+    })
+    .post(GetClasses)
 }
 
 
