@@ -6,11 +6,12 @@ import studio from '../assets/icons8-video-camera.svg'
 import profile from '../assets/icons8-cat-profile.svg'
 import NavItem from "./NavItem";
 import Search from "./Search";
-import { useNavigate } from "react-router-dom";
+
 
 
 function Navbar() {
-  const navigate = useNavigate();
+ 
+  
   return (
 
 
@@ -25,11 +26,11 @@ function Navbar() {
 
 
               <li>
-                  <NavItem svg={home} text={"Home"}/>
+                  <NavItem svg={home} text={"Home"} />
               </li>
 
               <li>
-                  <NavItem svg={learning} text={"learning"} />
+                  <NavItem svg={learning} text={"learning"}/>
               </li>
               <li>
                   <NavItem svg={portfolio} text={"portfolio"}/>

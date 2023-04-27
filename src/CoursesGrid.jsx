@@ -15,7 +15,7 @@ const products = [
     {
         id: 2,
         name: 'Introduction to React.js',
-        href: '/lcourse-info',
+        href: '/course-info',
         imageSrc: './assets/search-icon.webp',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$35',
