@@ -1,4 +1,5 @@
 [![codecov](https://github.com/ItsJustSbu/Short-Course-System/actions/workflows/codecov.yml/badge.svg)](https://github.com/ItsJustSbu/Short-Course-System/actions/workflows/codecov.yml)
+[![Azure Static Web Apps CI/CD](https://github.com/ItsJustSbu/Short-Course-System/actions/workflows/azure-static-web-apps-nice-ground-0af42f010.yml/badge.svg)](https://github.com/ItsJustSbu/Short-Course-System/actions/workflows/azure-static-web-apps-nice-ground-0af42f010.yml)
 
 # Softeware-Design-Project
 This is our working Repo<br>
