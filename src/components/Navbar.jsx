@@ -8,7 +8,10 @@ import NavItem from "./NavItem";
 import Search from "./Search";
 
 
+
 function Navbar() {
+ 
+  
   return (
 
 
@@ -23,7 +26,7 @@ function Navbar() {
 
 
               <li>
-                  <NavItem svg={home} text={"Home"}/>
+                  <NavItem svg={home} text={"Home"} />
               </li>
 
               <li>
