@@ -2,9 +2,9 @@ name: Jest tests
 
 on:
   push:
-    branches: [main]
+    branches: [master]
   pull_request:
-    branches: [main]
+    branches: [master]
 
 jobs:
   jest:
@@ -24,8 +24,8 @@ jobs:
       - name: Run Jest tests
         run: npm test -- --coverage --coverage-report=lcov
 
-      - name: Upload coverage report to Codecov
-        uses: codecov/codecov-action@v2
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           flags: jest

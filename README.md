@@ -1,4 +1,4 @@
-[![codecov](https://codecov.io/gh/username/repo-name/branch/main/graph/badge.svg?token=YOUR_TOKEN_HERE)](https://codecov.io/gh/username/repo-name)
+[![codecov](https://github.com/ItsJustSbu/Short-Course-System/actions/workflows/jest_test.yml/badge.svg)](https://github.com/ItsJustSbu/Short-Course-System/actions/workflows/jest_test.yml)
 
 
 # Softeware-Design-Project
