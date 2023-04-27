@@ -1,5 +1,4 @@
-[![codecov](https://github.com/ItsJustSbu/Short-Course-System/actions/workflows/jest_test.yml/badge.svg)](https://github.com/ItsJustSbu/Short-Course-System/actions/workflows/jest_test.yml)
-
+[![codecov](https://github.com/ItsJustSbu/Short-Course-System/actions/workflows/codecov.yml/badge.svg)](https://github.com/ItsJustSbu/Short-Course-System/actions/workflows/codecov.yml)
 
 # Softeware-Design-Project
 This is our working Repo<br>
