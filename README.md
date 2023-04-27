@@ -1,5 +1,5 @@
+[![codecov](https://codecov.io/gh/username/repo-name/branch/main/graph/badge.svg?token=YOUR_TOKEN_HERE)](https://codecov.io/gh/username/repo-name)
 
-![codecov](https://img.shields.io/badge/coverage-100%25-red)
 
 # Softeware-Design-Project
 This is our working Repo<br>

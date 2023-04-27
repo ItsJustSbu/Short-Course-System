@@ -3,7 +3,7 @@ import CoursesGrid from '../CoursesGrid';
 import { useLocation } from "react-router";
 
 function HomePage() {
-  const { state} = useLocation();
+  const {state} = useLocation();
 
   return (
     <div>
