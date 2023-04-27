@@ -1,11 +1,12 @@
 
 import image1 from './assets/video-placeholder.jpg'
+import { useNavigate } from "react-router-dom";
 
 const products = [
     {
         id: 1,
         name: 'Introduction to React.js',
-        href: '/list',
+        href: '/course-info',
         imageSrc: './assets/search-icon.webp',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$35',
@@ -14,7 +15,7 @@ const products = [
     {
         id: 2,
         name: 'Introduction to React.js',
-        href: '/list',
+        href: '/lcourse-info',
         imageSrc: './assets/search-icon.webp',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$35',
@@ -23,7 +24,7 @@ const products = [
     {
         id: 3,
         name: 'Introduction to React.js',
-        href: '/list',
+        href: '/course-info',
         imageSrc: './assets/search-icon.webp',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$35',
@@ -32,7 +33,7 @@ const products = [
     {
         id: 4,
         name: 'Introduction to React.js',
-        href: '/list',
+        href: '/course-info',
         imageSrc: './assets/search-icon.webp',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$35',
@@ -41,7 +42,7 @@ const products = [
     {
         id: 5,
         name: 'Introduction to React.js',
-        href: '/list',
+        href: '/course-info',
         imageSrc: './assets/search-icon.webp',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$35',
@@ -50,7 +51,7 @@ const products = [
     {
         id: 6,
         name: 'Introduction to React.js',
-        href: '/list',
+        href: '/course-info',
         imageSrc: './assets/search-icon.webp',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$35',
@@ -59,7 +60,7 @@ const products = [
     {
         id: 7,
         name: 'Introduction to React.js',
-        href: '/list',
+        href: '/course-info',
         imageSrc: './assets/search-icon.webp',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$35',
@@ -68,7 +69,7 @@ const products = [
     {
         id: 8,
         name: 'Introduction to React.js',
-        href: '/list',
+        href: '/course-info',
         imageSrc: './assets/search-icon.webp',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$35',
@@ -77,7 +78,7 @@ const products = [
     {
         id: 9,
         name: 'Introduction to React.js',
-        href: '/list',
+        href: '/course-info',
         imageSrc: './assets/search-icon.webp',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$35',
@@ -86,7 +87,7 @@ const products = [
     {
         id: 10,
         name: 'Introduction to React.js',
-        href: '/list',
+        href: '/course-info',
         imageSrc: './assets/search-icon.webp',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$35',
@@ -95,6 +96,11 @@ const products = [
 ]
 
 export default function Example() {
+    const navigate = useNavigate();
+
+  const handleClick = (href) => {
+    navigate(href);
+  };
 return (
 <div>
     <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
@@ -104,7 +110,8 @@ return (
             {products.map((product) => (
             <div key={product.id} className="group relative" title={product.name}>
                 <div
-                    className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
+                    className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80"
+                    onClick={() => handleClick(product.href)}>
                     <img src={image1} alt={product.imageAlt}
                         className="h-full w-full object-cover object-center lg:h-full lg:w-full" />
                 </div>
