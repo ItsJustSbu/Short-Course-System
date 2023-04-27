@@ -1,6 +1,9 @@
 
 import VideoSplitScreen from "../layouts/VideoSplitSCreenLayout";
 import TopBot from "../layouts/TopBot";
+import ChatApp from "./ChatApp";
+import ChatWindowComponent from "../components/chat/ChatWindowCompoent";
+import TextFieldComponent from "../components/chat/TextFieldComponent";
 
 
 
@@ -14,8 +17,7 @@ function VideoPage(){
                     <iframe title="This is a video" className="responsive-video" height="700" width='100%' src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
                     <TopBot>
                         <div>
-                            <h1 className="text-center">Yes</h1>
-                            <p className="text-center">This is supposed to be a chat Window</p>
+                            <TextFieldComponent />
                         </div>
                         <div className="flex flex-col gap-1 h-full place-items-center">
                             <div className="grow-0">

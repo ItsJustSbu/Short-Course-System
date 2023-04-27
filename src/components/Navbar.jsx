@@ -26,21 +26,21 @@ function Navbar() {
 
 
               <li>
-                  <NavItem svg={home} text={"Home"} />
+                  <NavItem svg={home} text={"Home"} link="/home"/>
               </li>
 
               <li>
-                  <NavItem svg={learning} text={"learning"}/>
+                  <NavItem svg={learning} text={"learning"} link="/list"/>
               </li>
               <li>
-                  <NavItem svg={portfolio} text={"portfolio"}/>
+                  <NavItem svg={portfolio} text={"portfolio"} link="#"/>
               </li>
 
               <li>
-                  <NavItem svg={studio} text={"studio"}/>
+                  <NavItem svg={studio} text={"studio"} link="#"/>
               </li>
               <li>
-                  <NavItem svg={profile} />
+                  <NavItem svg={profile} link="#"/>
               </li> 
           </ul>
         </div>

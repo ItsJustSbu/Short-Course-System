@@ -1,3 +1,5 @@
+import { useNavigate, useLocation } from "react-router";
+
 const course = {
         name: 'Introduction to Ergonomics',
         author: "Michael Mkhize",
@@ -9,13 +11,17 @@ const course = {
     }
 
 function CourseInfoHeading() {
+    const navigate = useNavigate();
+    const {state} = useLocation();
     return (
         
         <div className="h-72 bg-course-background bg-no-repeat bg-right bg-contain pl-5 mt-[50px] border-top mb-[150px]" >
             <h1 className="text-7xl pt-[20px] ">{course.name}</h1>
             <h3 className="mb-[70px] w-4/5">{course.author}</h3>
             <h4 className="mb-[70px] w-4/5">{course.description}</h4>
-            <button className="border px-9 py-2 border-gray-blue-100 text-gray-100 rounded-xl">Enroll</button>
+            <button className="border px-9 py-2 border-gray-blue-100 text-gray-100 rounded-xl" onClick={()=>(navigate('/watch', {
+                state
+            }))}>Enroll</button>
 
 
         </div>

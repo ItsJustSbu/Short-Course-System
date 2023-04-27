@@ -42,8 +42,7 @@ function LoginComponent(){
             
             //This is how you pass data to another page
             navigate('/home', {
-                id: response.data._id,
-                name:response.data.name
+                state: {id: response.data._id, name:response.data.name}
             });
         }
         
