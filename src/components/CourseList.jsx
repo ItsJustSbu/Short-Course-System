@@ -1,6 +1,7 @@
 import { progress } from "@material-tailwind/react"
 import Navbar from "./Navbar"
 import { LinearProgress } from "@mui/material"
+import { useNavigate } from "react-router-dom";
 
 const courses = [
     {
@@ -55,6 +56,10 @@ const courses = [
 ]
 
 export default function Example() {
+    const navigate = useNavigate();
+    const handleClick = () => {
+        navigate('/lesson');
+    };
     return (
         <div class="flex justify-center pt-9">
 
@@ -76,7 +81,7 @@ export default function Example() {
                             </div> 
                         </div>
                         <div className="align-bottom">
-                            <button className="border-2 mr-5 w-50 px-5 py-3 rounded-xl text-blue-gray-200">Continue</button>
+                            <button className="border-2 mr-5 w-50 px-5 py-3 rounded-xl text-blue-gray-200"onClick={handleClick}>Continue</button>
                         </div>     
                     </div>
                 </li>

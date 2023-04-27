@@ -5,7 +5,9 @@ import RegistrationPage from './page/RegistrationPage';
 import LoginPage from './page/LoginPage';
 import ChatApp from './page/ChatApp';
 import VideoPage from './page/VideoPage';
-import MyLearning from './page/MyLearning';import CourseInfoPage from "./page/CourseInfoPage";
+import MyLearning from './page/MyLearning';
+import CourseInfoPage from "./page/CourseInfoPage";
+import Lessons from "./page/Lessons";
 
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
       <Route path="*" element={<h1>404: Not Found</h1>} />
       <Route path="/chat" element={<ChatApp />} />
       <Route path="/home" element={<HomePage />} />
+      <Route path="/lesson" element={<Lessons />} />
       
       <Route path="/course-info" element={<CourseInfoPage/>} />
     </Routes>
