@@ -22,6 +22,31 @@ const Routes = (app) =>{
         res.send('Chat Successful');
     })
     .post(SendMessageController)
+
+    app.route('/mycourses')
+    .get((req, res)=>{
+        res.send('Course Successfully Added');
+    })
+    .post(AddMyCourses)
+
+    app.route('/Updatemycourses')
+    .get((req, res)=>{
+        res.send('Course Successfully Updated');
+    })
+    .post(UpdateMyCourses)
+
+
+    app.route('/addcourse')
+    .get((req, res)=>{
+        res.send('Course Successfully Added');
+    })
+    .post(AddCourse)
+
+    app.route('/Updateclasses')
+    .get((req, res)=>{
+        res.send('Classes Successfully Updated');
+    })
+    .post(UpdateClasses)
 }
 
 
