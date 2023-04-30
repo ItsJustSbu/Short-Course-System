@@ -10,7 +10,7 @@ Use the branches to complete tasks that are assigned to you on Taiga, afterwards
 Should you have an issue or a bug or whatever, please make use of the issues tab on github to notify everyone that you have some form of issue<br>
 All passwords, ssh keys etc. will be stored on this README.md file as well as most of the documentation, please make use of this README.md to document your work <br>
 
-# stack
+## stack
 we are using the following stack: <br>
 React.Js for front end work <br>
 Express.js and Node.js as our server<br>
