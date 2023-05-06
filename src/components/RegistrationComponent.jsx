@@ -28,14 +28,19 @@ function RegistrationComponent(){
         const response = await axios.post('http://localhost:3000/registerUser', registrationData, customConfig)
         .then(console.log('success')).catch((err)=>console.log(err));
 
-        if (response.data === null){
-            alert('try again');
+        if (response.data.code === 11000){  // if email already exists
+            
+            alert('email already exists');
         }else{
-            console.log(response.data);
-            navigate('/login', {replace: true})
+            navigate('/home', {
+                state: {id: response.data._id, name:response.data.name}
+            });
         }
 
     }
+    const handleLoginClick = () => {
+        navigate("/login", { replace: true });
+      };
 
     return(
         <form className="ml-[120px] mt-[150px] w-80 max-w-screen-lg sm:w-96" onSubmit={e =>handleSubmit(e)}>
@@ -56,7 +61,9 @@ function RegistrationComponent(){
               >
                 Register
             </Button>
-            <Button variant="text" className="flex-1 mt-6">Already have an account?</Button>
+            <Button variant="text" className="flex-1 mt-6" onClick={handleLoginClick}>
+                Already have an account?
+                </Button>
             </div>
             
 

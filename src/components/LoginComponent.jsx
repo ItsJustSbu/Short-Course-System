@@ -11,6 +11,25 @@ function LoginComponent(){
 
     const navigate = useNavigate();
 
+    
+    // React.useEffect(() => {
+    //     const handleClick = () => {
+    //       navigate('/home');
+    //     };
+    
+    //     handleClick();
+    //   }, [navigate]);
+
+
+    //   useEffect(()=>{
+    //     const handleButtonClick = () => {
+    //         console.log('button clicked+');
+    //         navigate('/register', {replace: true})
+    //       };
+    // },[]);
+
+
+
     // const[loginData, setLoginData] = useState({email:'', password:''});
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -26,7 +45,7 @@ function LoginComponent(){
         e.preventDefault();
 
         const loginData = {email, password};
-        console.log(loginData);
+        console.log(loginData+"dvadfjl");
         const customConfig = {
             header : {
                 "Content-Type": "application/json",
@@ -48,6 +67,10 @@ function LoginComponent(){
         
     }
 
+    const handleRegisterClick = () => {
+        navigate("/register", { replace: true });
+      };
+
 
     return(
         <form className="ml-[250px] mt-[200px] w-80 max-w-screen-lg sm:w-96" onSubmit={e=>handleSubmit(e)}>
@@ -68,7 +91,10 @@ function LoginComponent(){
               >
                 Login
             </Button>
-            <Button variant="text" className="flex-1 mt-6">Dont have an account?</Button>
+            
+            <Button variant="text" className="flex-1 mt-6" onClick={handleRegisterClick}>
+                Dont have an account
+            </Button>
             </div>
             
 
