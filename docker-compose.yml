@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  client:
+    container_name: frontend
+    restart: always
+    build : ./frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - app
+    links:
+      - app
+
+  app:
+    container_name: backend
+    restart: always
+    build: ./backend
+    ports:
+      - "8080:8080"
