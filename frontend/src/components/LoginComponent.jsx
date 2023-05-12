@@ -52,7 +52,7 @@ function LoginComponent(){
             },
         };
         
-        const response = await axios.post('http://localhost:8080/loginUser', loginData, customConfig)
+        const response = await axios.post('https://shortcourseapi.azurewebsites.net/loginUser', loginData, customConfig)
         .then(console.log('success')).catch((err)=>console.log(err));
 
         if(response.data === null){
