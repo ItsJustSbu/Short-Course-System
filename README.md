@@ -1,4 +1,4 @@
-[![codecov](https://github.com/ItsJustSbu/Short-Course-System/actions/workflows/codecov.yml/badge.svg)](https://github.com/ItsJustSbu/Short-Course-System/actions/workflows/codecov.yml)
+[![Build and deploy Node.js app to Azure Web App - short-course-system](https://github.com/ItsJustSbu/Short-Course-System/actions/workflows/development-branch_short-course-system.yml/badge.svg)](https://github.com/ItsJustSbu/Short-Course-System/actions/workflows/development-branch_short-course-system.yml)
 
 # Softeware-Design-Project
 This is our working Repo<br>
