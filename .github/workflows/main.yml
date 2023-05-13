@@ -20,7 +20,7 @@ jobs:
         run: npm install
       - name: Send WhatsApp alert
         run: |
-          curl -X POST 'https://api.twilio.com/2010-04-01/Accounts/your-account-sid/Messages.json' \
+          curl -X POST 'https://api.twilio.com/2010-04-01/Accounts/AC8135259bdf7fe17daf947e8989c4fb6d/Messages.json' \
           --data-urlencode 'To=whatsapp:+27609950064' \
           --data-urlencode 'From=whatsapp:+14155238886' \
           --data-urlencode 'Body=Your GitHub workflow has completed. Check the status.'
