@@ -53,4 +53,4 @@ jobs:
           app-name: 'apiscs'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C2A7AB51E1E84DEF823238097FBE4746 }}
-          package: ./backend
+          package: .
