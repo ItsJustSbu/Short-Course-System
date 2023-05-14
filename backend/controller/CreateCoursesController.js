@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import CreateCourses from "../Model/CreateCourseModel";
+import CreateCourses from "../Model/CreateCourseModel.js";
 
 const createCourse = mongoose.model("createCourse", CreateCourses);
 
