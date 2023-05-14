@@ -24,7 +24,7 @@ jobs:
       - name: npm install, build, and test
         run: |
           npm install
-          npm run start
+          
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
@@ -52,4 +52,4 @@ jobs:
           app-name: 'apiscs'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C2A7AB51E1E84DEF823238097FBE4746 }}
-          package: .
+          package: ./backend
