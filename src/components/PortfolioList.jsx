@@ -77,13 +77,6 @@ const quizzes = [
         pass: false,
         
     },
-    {
-        courseName: 'Intro to Ergonomics',
-        name: 'Quiz 3',
-        description: 'A quiz is a fun and interactive way to test your knowledge on a particular topic. OpenMP (Open Multi-Processing) is an application programming interface (API) that enables parallel programming on shared memory multiprocessing architectures.',
-        percentage: 63,
-        pass: false,
-    },
  
     
 ]
