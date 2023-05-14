@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.44d9423c.css",
+    "main.js": "/static/js/main.2032c4ce.js",
+    "static/media/course.svg": "/static/media/course.05b6f9e901b28a75da75.svg",
+    "static/media/icons8-cat-profile.svg": "/static/media/icons8-cat-profile.922e85d99eecf768f99e70b28d3df6a9.svg",
+    "static/media/icons8-home-page.svg": "/static/media/icons8-home-page.aab272c7f75402022e971b6a1726c851.svg",
+    "static/media/icons8-video-camera.svg": "/static/media/icons8-video-camera.90de69b7841f9c51f0024cbaa0fc3536.svg",
+    "static/media/icons8-bookmark.svg": "/static/media/icons8-bookmark.e1235a7f99c83916b946cc0867437f58.svg",
+    "static/media/icons8-e-learning.svg": "/static/media/icons8-e-learning.e2cd8c03b04d0702aeaf01de274f5e38.svg",
+    "index.html": "/index.html",
+    "main.44d9423c.css.map": "/static/css/main.44d9423c.css.map",
+    "main.2032c4ce.js.map": "/static/js/main.2032c4ce.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.44d9423c.css",
+    "static/js/main.2032c4ce.js"
+  ]
+}
