@@ -8,6 +8,7 @@ app.use(cors());
 
 let uri = 'mongodb+srv://cacheincacheout01:p2VDsQxwNUMtZlEQ@softwaredesignproject.lmdwpma.mongodb.net/software_database'; 
 
+const port = process.env.PORT || 8080; // default port to listen
 //connecting mongoose
 mongoose.Promise = global.Promise;
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
@@ -20,6 +21,6 @@ app.use(bodyParser.json());
 routes(app);
 
 // start the Express server
-app.listen(process.env.PORT || 8080, () => {
-  console.log('Express server is listening on port 8080');
+app.listen(port, () => {
+  console.log(`Express server is listening on port ${port}`);
 });

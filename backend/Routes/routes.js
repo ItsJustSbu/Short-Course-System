@@ -4,6 +4,9 @@ import RetrieveUser from '../controller/RetrieveUser.js'
 import {AddMyCourses, UpdateMyCourses,GetMyCourses} from '../controller/MyCoursesController.js'
 import {CreateCourse, UpdateClasses,GetClasses} from '../controller/CoursesController.js'
 import CreateCourseController from '../controller/CreateCoursesController.js';
+import updateChats from '../controller/UpdateChatsController.js';
+import findUserController from '../controller/findUserController.js';
+import RetrieveChats from '../controller/RetrieveChats.js';
 
 const Routes = (app) =>{
 
@@ -70,6 +73,20 @@ const Routes = (app) =>{
         res.send(req.body); //returns the request body as a response
     })
     .post(CreateCourseController); //calls the CreateCourseController function
+
+    app.route('/updateChats')
+    .get((req, res)=>{
+        res.send(req.body);
+    }
+    )
+    .post(updateChats);
+
+    app.route('/finduser')
+    .get(findUserController);
+
+
+    app.route('/retrieveChats')
+    .get(RetrieveChats);
 }
 
 

@@ -1,16 +1,20 @@
 import mongoose from "mongoose";
-import ChatAppModel from "../Model/ChatAppModel";
+import ChatAppModel from "../Model/ChatAppModel.js";
 
-function updateChats(req, res) {
-    let updateChats = mongoose.model("updateChats", ChatAppModel);
-    const group = req.body.group;
-    const message = req.body.message;
-    const sender = req.body.sender;
-    const id = req.body.id;
+async function updateChats(req, res) {
+  const updateChats = mongoose.model("updateChats", ChatAppModel);
+  const { group, message, sender, id } = req.body;
 
-    // updates the chats collection with the new message and returns the result as a json object to the client
-    updateChats.findOneAndUpdate({'group': group}, {$push: {'sender': {'id':id,'message': message, 'name': sender}}})
-    .then((result) => res.json(result)).catch((e) => res.send(e));
+  try {
+    const result = await updateChats.findOneAndUpdate(
+      { "group": {name:group}},
+      { $push: { sender: { id: id, message: message, name: sender } } },// Return updated document
+    );
+    const items = await updateChats.find({"group":{name:group}});
+    res.json(items);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
 }
 
 export default updateChats;
