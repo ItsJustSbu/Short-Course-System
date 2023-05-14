@@ -1,11 +1,13 @@
 import mongoose from "mongoose";
-import ChatAppModel from "../Model/ChatAppModel";
+import ChatAppModel from "../Model/ChatAppModel.js";
 
 function RetrieveChats(req, res) {
-    let retrieveChats = mongoose.model("retrieveChats", ChatAppModel);
-    const group = req.body.group;
+    let retrieveChats = mongoose.model("updatechats", ChatAppModel);
+    // const group = req.body.group;
   retrieveChats
-    .findOne({'group': group})
+    .find({ "group": {name:req.body.group}})
     .then((result) => res.json(result))
     .catch((e) => res.send(e));
 }
+
+export default RetrieveChats
