@@ -29,17 +29,17 @@ function Navbar() {
               </li>
 
               <li>
-                  <NavItem svg={learning} text={"learning"} link="/list"/>
+                  <NavItem svg={learning} text={"My Learning"} link="/list"/>
               </li>
               <li>
-                  <NavItem svg={portfolio} text={"portfolio"} link="#"/>
+                  <NavItem svg={portfolio} text={"Portfolio"} link="#"/>
               </li>
 
               <li>
-                  <NavItem svg={studio} text={"studio"} link="#"/>
+                  <NavItem svg={studio} text={"Studio"} link="#"/>
               </li>
               <li>
-                  <NavItem svg={profile} link="#"/>
+              <NavItem svg={profile} link="#"/>
               </li> 
           </ul>
         </div>
