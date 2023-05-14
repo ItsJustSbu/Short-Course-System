@@ -9,6 +9,7 @@ import MyLearning from './page/MyLearning';
 import CourseInfoPage from "./page/CourseInfoPage";
 import Lessons from "./page/Lessons";
 import MyContext from "./MyContext";
+import PortfolioPage from "./page/PortfolioPage";
 
 
 function App() {
@@ -27,7 +28,8 @@ function App() {
       <Route path="/chat" element={<ChatApp />} />
       <Route path="/home" element={<HomePage />} />
       <Route path="/lesson" element={<Lessons />} />
-      <Route path="/course-info" element={<CourseInfoPage/>} />
+      <Route path="/course-info" element={<CourseInfoPage />} />
+      <Route path="/portfolio" element={<PortfolioPage/>} />
     </Routes>
     </MyContext.Provider>
     </>
