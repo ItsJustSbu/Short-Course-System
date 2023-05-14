@@ -20,6 +20,7 @@ const Routes = (app) =>{
     })
     .post(RetrieveUser)
 
+    //sends a message to the database
     app.route('/chat')
     .get((req, res)=>{
         res.send(req.body);

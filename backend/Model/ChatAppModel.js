@@ -18,7 +18,7 @@ let ChatAppModel = new Schema({
       },
 
     //this is the sender of the message as well as the message
-      sender: {
+      sender: [{
         id: {
           type: String,
           required: true
@@ -26,12 +26,13 @@ let ChatAppModel = new Schema({
         name: {
           type: String,
           required: true
+        },
+        message: {
+          type: String,
+          required: true
         }
-      },
-      message: {
-        type: String,
-        required: true
-      }
+      }],
+      
 });
 
 export default ChatAppModel;
