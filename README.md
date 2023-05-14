@@ -1,4 +1,4 @@
-[![Build and deploy Node.js app to Azure Web App - short-course-system](https://github.com/ItsJustSbu/Short-Course-System/actions/workflows/development-branch_short-course-system.yml/badge.svg)](https://github.com/ItsJustSbu/Short-Course-System/actions/workflows/development-branch_short-course-system.yml)
+[![Build and deploy Node.js app to Azure Web App - short-course-system](https://github.com/ItsJustSbu/Short-Course-System/actions/workflows/frontend.yml/badge.svg)](https://github.com/ItsJustSbu/Short-Course-System/actions/workflows/frontend.yml)
 [![App Backend](https://github.com/ItsJustSbu/Short-Course-System/actions/workflows/master_apiscs.yml/badge.svg)](https://github.com/ItsJustSbu/Short-Course-System/actions/workflows/master_apiscs.yml)
 
 # Softeware-Design-Project
