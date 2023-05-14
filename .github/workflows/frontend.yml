@@ -53,4 +53,4 @@ jobs:
           app-name: 'short-course-system'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9D5A6C2712944AE3999C792ADB5CD65A }}
-          package: ./frontend
+          package: .
