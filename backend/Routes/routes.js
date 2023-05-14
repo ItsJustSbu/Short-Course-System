@@ -3,25 +3,26 @@ import SendMessageController from '../controller/SendMessageController.js';
 import RetrieveUser from '../controller/RetrieveUser.js'
 import {AddMyCourses, UpdateMyCourses,GetMyCourses} from '../controller/MyCoursesController.js'
 import {CreateCourse, UpdateClasses,GetClasses} from '../controller/CoursesController.js'
+import CreateCourseController from '../controller/CreateCoursesController.js';
 
 const Routes = (app) =>{
 
     app.route('/registerUser')
     .get((req, res)=>{
-        res.send('User Successfully Registered');
+        res.send(req.body);
     })
     .post(registerUser)
 
     app.route('/loginUser')
     .get((req, res)=>{
         console.log(req.body)
-        res.send('Login Successful');
+        res.send(res.body);
     })
     .post(RetrieveUser)
 
     app.route('/chat')
     .get((req, res)=>{
-        res.send('Chat Successful');
+        res.send(req.body);
     })
     .post(SendMessageController)
 
@@ -60,7 +61,14 @@ const Routes = (app) =>{
     .get((req, res)=>{
         res.send('Classes Successfully Retrieved');
     })
-    .post(GetClasses)
+    .post(GetClasses);
+
+    //Route for adding courses to the database
+    app.route('/createCourse')
+    .get((req, res)=>{
+        res.send(req.body); //returns the request body as a response
+    })
+    .post(CreateCourseController); //calls the CreateCourseController function
 }
 
 
