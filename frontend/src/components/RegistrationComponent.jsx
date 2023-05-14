@@ -25,16 +25,14 @@ function RegistrationComponent(){
             },
         };
 
-        const response = await axios.post('https://shortcourseapi.azurewebsites.net/registerUser', registrationData, customConfig)
+        const response = await axios.post('https://apiscs.azurewebsites.net/registerUser', registrationData, customConfig)
         .then(console.log('success')).catch((err)=>console.log(err));
 
         if (response.data.code === 11000){  // if email already exists
             
             alert('email already exists');
         }else{
-            navigate('/home', {
-                state: {id: response.data._id, name:response.data.name}
-            });
+            navigate('/login');
         }
 
     }

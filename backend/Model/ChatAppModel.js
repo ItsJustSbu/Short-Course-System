@@ -11,10 +11,6 @@ let ChatAppModel = new Schema({
       
       //this is the group that the message is being sent to
       group: {
-        id: {
-          type: String,
-          required: true
-        },
         name: {
           type: String,
           required: true

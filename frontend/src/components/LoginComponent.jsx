@@ -1,7 +1,8 @@
 import { Input, Button } from "@material-tailwind/react";
-import {React, useState} from "react";
+import {React, useContext, useState} from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import MyContext from "../MyContext";
 
 
 
@@ -33,7 +34,7 @@ function LoginComponent(){
     // const[loginData, setLoginData] = useState({email:'', password:''});
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
+    const {setUser} = useContext(MyContext);
     // useEffect(()=>{
     //     if(email.length < 2){
     //         console.log('name must be 2 or more charecters');
@@ -52,7 +53,7 @@ function LoginComponent(){
             },
         };
         
-        const response = await axios.post('https://shortcourseapi.azurewebsites.net/loginUser', loginData, customConfig)
+        const response = await axios.post('https://apiscs.azurewebsites.net/loginUser', loginData, customConfig)
         .then(console.log('success')).catch((err)=>console.log(err));
 
         if(response.data === null){
@@ -60,9 +61,8 @@ function LoginComponent(){
         }else{
             
             //This is how you pass data to another page
-            navigate('/home', {
-                state: {id: response.data._id, name:response.data.name}
-            });
+            setUser(response.data);
+            navigate('/home');
         }
         
     }

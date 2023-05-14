@@ -1,9 +1,8 @@
 import Home from "../Home"
 import CoursesGrid from '../CoursesGrid';
-import { useLocation } from "react-router";
 
 function HomePage() {
-  const {state} = useLocation();
+
 
   return (
     <div>
@@ -11,7 +10,7 @@ function HomePage() {
     <Home />
     </div>
     <div>
-    <CoursesGrid state={state}/>
+    <CoursesGrid />
     </div>
     
     </div>

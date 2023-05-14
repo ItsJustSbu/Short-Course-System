@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import image1 from './assets/video-placeholder.jpg'
 import { useNavigate } from "react-router-dom";
+import MyContext from "./MyContext"
+import { useContext } from 'react';
 
 const products = [
     {
@@ -95,8 +97,10 @@ const products = [
     },
 ]
 
-export default function Example({state}) {
+export default function Example() {
     const navigate = useNavigate();
+    const {user} = useContext(MyContext);
+    // console.log(user)
 
   const handleClick = (href) => {
     navigate(href);
@@ -118,7 +122,7 @@ return (
                 <div className="mt-4 flex justify-between">
                     <div>
                         <h3 className="text-sm text-gray-200">
-                            <Link to ="/course-info" state={{state}}>
+                            <Link to ="/course-info" >
                                 <span aria-hidden="true" className="absolute inset-0" />
                                 {product.name}
                                 </Link>

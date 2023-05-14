@@ -1,4 +1,4 @@
-
+import { useState } from "react";
 import {Routes, Route, Navigate} from "react-router-dom"
 import HomePage from './page/HomePage';
 import RegistrationPage from './page/RegistrationPage';
@@ -8,12 +8,15 @@ import VideoPage from './page/VideoPage';
 import MyLearning from './page/MyLearning';
 import CourseInfoPage from "./page/CourseInfoPage";
 import Lessons from "./page/Lessons";
+import MyContext from "./MyContext";
 
 
 function App() {
+  const [user, setUser] = useState("");
 
   return (
     <>
+    <MyContext.Provider value={{user, setUser}}>
     <Routes>
       <Route path="/" element={<Navigate to ="/login" />} />
       <Route path="/register" element={<RegistrationPage />}/>
@@ -24,9 +27,9 @@ function App() {
       <Route path="/chat" element={<ChatApp />} />
       <Route path="/home" element={<HomePage />} />
       <Route path="/lesson" element={<Lessons />} />
-      
       <Route path="/course-info" element={<CourseInfoPage/>} />
     </Routes>
+    </MyContext.Provider>
     </>
     
   )
