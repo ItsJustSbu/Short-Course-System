@@ -10,6 +10,7 @@ import CourseInfoPage from "./page/CourseInfoPage";
 import Lessons from "./page/Lessons";
 import MyContext from "./MyContext";
 import PortfolioPage from "./page/PortfolioPage";
+import ProfilePage from "./page/ProfilePage"
 
 
 function App() {
@@ -29,7 +30,8 @@ function App() {
       <Route path="/home" element={<HomePage />} />
       <Route path="/lesson" element={<Lessons />} />
       <Route path="/course-info" element={<CourseInfoPage />} />
-      <Route path="/portfolio" element={<PortfolioPage/>} />
+      <Route path="/portfolio" element={<PortfolioPage />} />
+      <Route path="/profile" element={<ProfilePage/>} />
     </Routes>
     </MyContext.Provider>
     </>
