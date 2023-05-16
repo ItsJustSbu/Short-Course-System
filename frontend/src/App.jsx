@@ -10,7 +10,16 @@ import CourseInfoPage from "./page/CourseInfoPage";
 import Lessons from "./page/Lessons";
 import MyContext from "./MyContext";
 import PortfolioPage from "./page/PortfolioPage";
+
+import Studio from "./layouts/Studio";
+import Dashboard from "./page/Dashboard";
+import Courses from "./page/Courses";
+import Quizzes from "./page/Quizzes";
+import AddCourse from "./page/AddCourse";
+
+=======
 import ProfilePage from "./page/ProfilePage"
+
 
 
 function App() {
@@ -30,8 +39,18 @@ function App() {
       <Route path="/home" element={<HomePage />} />
       <Route path="/lesson" element={<Lessons />} />
       <Route path="/course-info" element={<CourseInfoPage />} />
+
+            
+      </Route>
+      <Route path="/portfolio" element={<PortfolioPage/>} />
+      <Route path="/studio" element={<Studio/>}>
+        <Route path="Dashboard/" element={<Dashboard />}/>
+        <Route path="Courses/" element={<Courses />}/>
+        <Route path="Quizzes/" element={<Quizzes />}/>
+        <Route path="AddCourse/" element={<AddCourse />}/> 
       <Route path="/portfolio" element={<PortfolioPage />} />
       <Route path="/profile" element={<ProfilePage/>} />
+
     </Routes>
     </MyContext.Provider>
     </>

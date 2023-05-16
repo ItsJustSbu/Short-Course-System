@@ -36,7 +36,7 @@ function Navbar() {
               </li>
 
               <li>
-                  <NavItem svg={studio} text={"Studio"} link="#"/>
+                  <NavItem svg={studio} text={"Studio"} link="/studio"/>
               </li>
               <li>
               <NavItem svg={profile} link="#"/>
