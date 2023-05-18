@@ -15,10 +15,13 @@ function CourseInfoHeading() {
     const {state} = useLocation();
     return (
         
+        // This layout component is used to display the course information on the course info page
+        // The course information is passed as props from the course info page
+        
         <div className="h-72 bg-course-background bg-no-repeat bg-right bg-contain pl-5 mt-[50px] border-top mb-[150px]" >
-            <h1 className="text-7xl pt-[20px] ">{course.name}</h1>
-            <h3 className="mb-[70px] w-4/5">{course.author}</h3>
-            <h4 className="mb-[70px] w-4/5">{course.description}</h4>
+            <h1 className="text-7xl pt-[20px] ">{course.name}</h1> // This is the course name
+            <h3 className="mb-[70px] w-4/5">{course.author}</h3> // This is the course author
+            <h4 className="mb-[70px] w-4/5">{course.description}</h4> // This is the course description
             <button className="border px-9 py-2 border-gray-blue-100 text-gray-100 rounded-xl" onClick={()=>(navigate('/watch', {
                 state
             }))}>Enroll</button>

@@ -59,15 +59,19 @@ export default function CourseList() {
         navigate('/lesson');
     };
     return (
+        
         <div class="flex justify-center pt-9">
 
+        // This component is used to display the text on the coourses in a grid
         <ul role="list" className="w-11/12 place-content-center bg-transparent">
             {courses.map((course) => (
+                // This component is used to display the text on the coourses in a grid
                 <li key={course.author} className="gap-x-6 py-5 pb-6 mb-7 border-2 border-blue-gray-200 rounded-xl content-center " >
                     <div className="flex gap-x-4 h-35 content-center">
                         <img className="flex-none h-full w-50 bg-gray-50 ml-6 rounded-xl" src={course.imageUrl} alt="" />
                         <div className="min-w-0 w-4/5">
                             <div className="h-3/5">
+
                                 <p className="text-5xl font-semibold leading-6 text-blue-gray-200 mb-5 mt-9">{course.name}</p>
                                 <p className="text-2xl mt-1 truncate text-xs leading-5 text-blue-gray-300 ">{course.author}</p>   
                             </div>

@@ -29,6 +29,7 @@ function App() {
     <>
     <MyContext.Provider value={{user, setUser}}>
     <Routes>
+      {/*These are the routes for the main app */}
       <Route path="/" element={<Navigate to ="/login" />} />
       <Route path="/register" element={<RegistrationPage />}/>
       <Route path="/login" element={<LoginPage />} />
@@ -43,6 +44,9 @@ function App() {
             
       
       <Route path="/portfolio" element={<PortfolioPage/>} />
+      {/* These are routes for the studio page nested 
+      inside the studio layout
+      */}
       <Route path="/studio" element={<Studio/>}>
         <Route path="Dashboard/" element={<Dashboard />}/>
         <Route path="Courses/" element={<Courses />}/>
