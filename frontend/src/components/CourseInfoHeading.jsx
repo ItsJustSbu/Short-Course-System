@@ -11,8 +11,8 @@ const course = {
     }
 
 function CourseInfoHeading() {
-    const navigate = useNavigate();
-    const {state} = useLocation();
+    const navigate = useNavigate();  // React Router hook for navigation
+    const {state} = useLocation();   // React Router hook for getting state from previous page
     return (
         
         // This layout component is used to display the course information on the course info page

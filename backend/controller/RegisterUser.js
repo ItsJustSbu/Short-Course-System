@@ -3,10 +3,15 @@ import AuthenticationSchema from "../Model/AuthenticationModel.js";
 
 const registerUserModel = mongoose.model('registerUser', AuthenticationSchema);
 
-function registerUser(req,res){
-    let RegisterUser = new registerUserModel(req.body);
+// Function to register a new user
+function registerUser(req, res) {
+  // Create a new instance of the registerUserModel with the request body
+  let RegisterUser = new registerUserModel(req.body);
 
-    RegisterUser.save().then((result)=>res.json(result)).catch((e)=>res.send(e));
+  // Save the new user to the database
+  RegisterUser.save()
+    .then((result) => res.json(result))
+    .catch((e) => res.send(e));
 }
 
 export default registerUser;

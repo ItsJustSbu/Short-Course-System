@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
 
-
+// Define the AuthenticationSchema
 const AuthenticationSchema = new Schema({
     name: {
         type: String,
