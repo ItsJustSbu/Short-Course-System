@@ -11,8 +11,8 @@ const course = {
     }
 
 function CourseInfoHeading() {
-    const navigate = useNavigate();
-    const {state} = useLocation();
+    const navigate = useNavigate();  // React Router hook for navigation
+    const {state} = useLocation();   // React Router hook for getting state from previous page
     return (
         
         <div className="h-72 bg-course-background bg-no-repeat bg-right bg-contain pl-5 mt-[50px] border-top mb-[150px]" >
