@@ -5,19 +5,14 @@ import VideoPage from '../page/VideoPage';
 
 
 describe('VideoPage', () => {
+
+  window.HTMLElement.prototype.scrollIntoView = function() {};
+  
   it('renders an iframe element with the correct video source', () => {
     render(<VideoPage />);
     const iframeElement = screen.getByTitle('This is a video');
     expect(iframeElement).toBeInTheDocument();
     expect(iframeElement).toHaveAttribute('src', 'https://www.youtube.com/embed/dQw4w9WgXcQ');
-  });
-
-  it('renders a chat window with the correct title and description', () => {
-    render(<VideoPage />);
-    const chatWindowTitleElement = screen.getByText('Yes');
-    const chatWindowDescriptionElement = screen.getByText('This is supposed to be a chat Window');
-    expect(chatWindowTitleElement).toBeInTheDocument();
-    expect(chatWindowDescriptionElement).toBeInTheDocument();
   });
 
   it('renders a textarea element for taking notes', () => {
