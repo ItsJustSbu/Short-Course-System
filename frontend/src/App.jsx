@@ -17,7 +17,7 @@ import Courses from "./page/Courses";
 import Quizzes from "./page/Quizzes";
 import AddCourse from "./page/AddCourse";
 
-=======
+
 import ProfilePage from "./page/ProfilePage"
 
 
@@ -41,13 +41,14 @@ function App() {
       <Route path="/course-info" element={<CourseInfoPage />} />
 
             
-      </Route>
+      
       <Route path="/portfolio" element={<PortfolioPage/>} />
       <Route path="/studio" element={<Studio/>}>
         <Route path="Dashboard/" element={<Dashboard />}/>
         <Route path="Courses/" element={<Courses />}/>
         <Route path="Quizzes/" element={<Quizzes />}/>
         <Route path="AddCourse/" element={<AddCourse />}/> 
+      </Route>
       <Route path="/portfolio" element={<PortfolioPage />} />
       <Route path="/profile" element={<ProfilePage/>} />
 
@@ -59,5 +60,7 @@ function App() {
 }
 
 export default App
+
+
 
 
