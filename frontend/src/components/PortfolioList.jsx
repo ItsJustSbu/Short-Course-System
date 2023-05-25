@@ -111,6 +111,9 @@ export default function Example() {
     const handleClick = () => {
         navigate('/lesson');
     };
+    const goToQuiz = () => {
+        navigate('/quiz-page')
+    }
     return (
         <div class="flex justify-center pt-9">
 
