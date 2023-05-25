@@ -164,7 +164,7 @@ export default function Example() {
                                                                 </div>
                                                                
                                                                 <div className="flex justify-end mt-3">
-                                                                    <button className="text-sm border rounded-xl px-4 py-2">Continue to quiz</button>
+                                                                    <button className="text-sm border rounded-xl px-4 py-2" onClick={goToQuiz}>Continue to quiz</button>
                                                                 </div>
                                                                 
                                                                 
