@@ -19,7 +19,7 @@ import AddCourse from "./page/AddCourse";
 
 
 import ProfilePage from "./page/ProfilePage"
-
+import QuizPage from "./page/QuizPage"
 
 
 function App() {
