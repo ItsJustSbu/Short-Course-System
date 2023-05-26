@@ -32,7 +32,7 @@ function Navbar() {
                   <NavItem svg={learning} text={"My Learning"} link="/list"/>
               </li>
               <li>
-                  <NavItem svg={portfolio} text={"Portfolio"} link="#"/>
+                  <NavItem svg={portfolio} text={"Portfolio"} link="/portfolio"/>
               </li>
 
               <li>

@@ -4,7 +4,8 @@ import { useNavigate } from "react-router-dom";
 import app from "../firebase/firebase.js";
 import google from "../assets/icons8-google.svg"
 import {getAuth, signInWithEmailAndPassword, fetchSignInMethodsForEmail, signInWithPopup, GoogleAuthProvider} from "firebase/auth";
-
+import db from "../firebase/firebase.js";
+import {addDoc,collection, getFirestore} from "firebase/firestore";
 
 
 
@@ -68,9 +69,22 @@ function LoginComponent(){
     };
 
 
+    // const handleRegisterClick = () => {
+    //     navigate("/register", { replace: true });
+    //   };
+
     const handleRegisterClick = () => {
-        navigate("/register", { replace: true });
-      };
+            const col = collection(db, "Test");
+
+            try{ 
+            addDoc(col, {name : "test"})
+            console.log("Document written with ID: ");
+            }catch(e){
+                console.log(e);
+            }
+
+
+    };
 
 
     return(
