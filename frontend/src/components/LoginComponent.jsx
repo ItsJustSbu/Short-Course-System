@@ -1,8 +1,9 @@
 import { Input, Button } from "@material-tailwind/react";
 import {React, useContext, useState} from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
-import MyContext from "../MyContext";
+import app from "../firebase/firebase.js";
+import google from "../assets/icons8-google.svg"
+import {getAuth, signInWithEmailAndPassword, fetchSignInMethodsForEmail, signInWithPopup, GoogleAuthProvider} from "firebase/auth";
 
 
 
@@ -12,60 +13,60 @@ function LoginComponent(){
 
     const navigate = useNavigate();
 
+
     
-    // React.useEffect(() => {
-    //     const handleClick = () => {
-    //       navigate('/home');
-    //     };
-    
-    //     handleClick();
-    //   }, [navigate]);
-
-
-    //   useEffect(()=>{
-    //     const handleButtonClick = () => {
-    //         console.log('button clicked+');
-    //         navigate('/register', {replace: true})
-    //       };
-    // },[]);
-
-
-
-    // const[loginData, setLoginData] = useState({email:'', password:''});
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const {setUser} = useContext(MyContext);
-    // useEffect(()=>{
-    //     if(email.length < 2){
-    //         console.log('name must be 2 or more charecters');
-    //     }
-    // },[email]);
+    const auth = getAuth(app);
+
+
+    const SignInWithGoogle = () =>{
+        const provider = new GoogleAuthProvider();
+        signInWithPopup(auth, provider).then((result)=>{
+            const credential = GoogleAuthProvider.credentialFromResult(result);
+            const token = credential.accessToken;
+            const user = result.user;
+            console.log(user);
+            navigate("/home", { replace: true });
+        }).catch((error)=>{
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            const email = error.email;
+            const credential = GoogleAuthProvider.credentialFromError(error);
+            console.log(errorCode);
+            console.log(errorMessage);
+            console.log(email);
+            console.log(credential);
+        })
+    }
 
     
-    const handleSubmit = async (e) =>{
+    const handleSubmit = (e) => {
         e.preventDefault();
-
-        const loginData = {email, password};
-        console.log(loginData+"dvadfjl");
-        const customConfig = {
-            header : {
-                "Content-Type": "application/json",
-            },
-        };
         
-        const response = await axios.post('https://apiscs.azurewebsites.net/loginUser', loginData, customConfig)
-        .then(console.log('success')).catch((err)=>console.log(err));
+        // Checks if a user exists
+        fetchSignInMethodsForEmail(auth, email).then((signInMethods)=>{
+            if (signInMethods.length === 0){
+                alert('User does not exist');
+                navigate("/register", { replace: true });
+            }
+        })
 
-        if(response.data === null){
-            alert('invalid credentials');
-        }else{
-            
-            //This is how you pass data to another page
-            setUser(response.data);
-            navigate('/home');
-        }
+        //Signs in a user that does exist
+        signInWithEmailAndPassword(auth, email,password).then((userCredential)=>{
+            const user = userCredential.user;
+            console.log(user);
+            navigate("/home", { replace: true });
+
+        }).catch((error)=>{
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // alert(`${errorMessage} with error code ${errorCode}`)
+        })            
+            // ...
         
-    }
+    };
+
 
     const handleRegisterClick = () => {
         navigate("/register", { replace: true });
@@ -95,7 +96,21 @@ function LoginComponent(){
             <Button variant="text" className="flex-1 mt-6" onClick={handleRegisterClick}>
                 Dont have an account
             </Button>
+
+            {/* google sign in button */}
+            
             </div>
+
+            <Button
+            size="lg"
+            variant="outlined"
+            color="blue-gray"
+            className="flex items-center gap-3 mt-5"
+            onClick={SignInWithGoogle}
+            >
+            <img src={google} alt="metamask" className="h-6 w-6" />
+            Continue with Google
+            </Button>
             
 
         </form>
