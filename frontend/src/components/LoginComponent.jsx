@@ -33,10 +33,8 @@ function LoginComponent(){
             const errorMessage = error.message;
             const email = error.email;
             const credential = GoogleAuthProvider.credentialFromError(error);
-            console.log(errorCode);
-            console.log(errorMessage);
-            console.log(email);
-            console.log(credential);
+            alert(`${errorMessage} with error code ${errorCode}`);
+            
         })
     }
 
@@ -61,7 +59,7 @@ function LoginComponent(){
         }).catch((error)=>{
             const errorCode = error.code;
             const errorMessage = error.message;
-            // alert(`${errorMessage} with error code ${errorCode}`)
+            alert(`${errorMessage} with error code ${errorCode}`)
         })            
             // ...
         
