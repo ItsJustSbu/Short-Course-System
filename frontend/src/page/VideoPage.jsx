@@ -12,7 +12,7 @@ function VideoPage(){
 
     return(
         <>
-            <form className="ml-[100px] mt-[50px] mr-[100px] md-[50px]">
+            <form className="">
                 <VideoSplitScreen>
                     <iframe title="This is a video" className="responsive-video" height="700" width='100%' src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
                     <TopBot>
