@@ -18,8 +18,10 @@ import Quizzes from "./page/Quizzes";
 import AddCourse from "./page/AddCourse";
 
 
-import ProfilePage from "./page/ProfilePage"
-import QuizPage from "./page/QuizPage"
+import ProfilePage from "./page/ProfilePage";
+import QuizPage from "./page/QuizPage";
+
+import CreaterStudio from "./page/CreaterStudio"
 
 
 function App() {
@@ -55,7 +57,10 @@ function App() {
         <Route path="AddCourse/" element={<AddCourse />}/> 
       </Route>
       <Route path="/portfolio" element={<PortfolioPage />} />
-      <Route path="/profile" element={<ProfilePage/>} />
+      <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/creater_studio" element={<CreaterStudio />} />
+          <Route path="/AddCourse" element={<AddCourse />} />
+          <Route path="/Courses" element={<Courses />}/>
 
     </Routes>
     </MyContext.Provider>

@@ -106,7 +106,7 @@ function CircularProgressWithLabel(props) {
 }
 
 
-export default function Example() {
+export default function PortfolioList() {
     const navigate = useNavigate();
     const handleClick = () => {
         navigate('/lesson');

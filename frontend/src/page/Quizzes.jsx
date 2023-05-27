@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react';
+import CreatedQuiz from '../components/CreatedQuizes';
 
 const Quizzes = () => {
   return (
-    <div>This is the Quiz Page</div>
+    <div>
+      <CreatedQuiz></CreatedQuiz>
+    </div>
   )
 }
 

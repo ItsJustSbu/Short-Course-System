@@ -2,8 +2,8 @@ import React from 'react'
 
 const AddCourse = () => {
   return (
-    <div className=' flex flex-col pl-2 text-white'>
-        <h1 className='bold text-4xl underline  pb-8'>Edit Course</h1>
+    <div className=' flex flex-col pl-2 text-light-purple'>
+        <h1 className='bold text-4xl pb-8'>Edit Course</h1>
         
         <h2 className='semibold text-2xl'>What will you call this Course?</h2>
         <p className=' pb-2 '>Give a title for your course.</p>
