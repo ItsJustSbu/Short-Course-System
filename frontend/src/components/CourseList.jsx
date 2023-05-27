@@ -62,7 +62,9 @@ export default function CourseList() {
         
         <div class="flex justify-center pt-9">
 
-        // This component is used to display the text on the coourses in a grid
+        
+
+            
         <ul role="list" className="w-11/12 place-content-center bg-transparent">
             {courses.map((course) => (
                 // This component is used to display the text on the coourses in a grid

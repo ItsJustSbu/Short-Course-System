@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import {MdAdd} from 'react-icons/md'
+import { MdAdd } from 'react-icons/md'
+import { useNavigate } from 'react-router-dom'
 
 var CourseList = [
   {
@@ -24,6 +25,11 @@ var CourseList = [
 ]
 
 const Courses = () => {
+  const navigate = useNavigate();
+    const goToAddCourse = () => {
+        navigate('/AddCourse')
+    }
+
   return (
     <div class="flex flex-col items-center pl-9 pt-9 text-white">
       <div className="w-11/12 place-content-center bg-transparent">
@@ -54,11 +60,11 @@ const Courses = () => {
       </div>
       <nav className='pb-9 '>
         <li>
-          <Link to={`/studio/AddCourse`}>
-            <button className='flex border-white border-2 rounded-md h-16 w-32 place-content-center items-center'>
+          
+            <button className='flex border-white border-2 rounded-md h-16 w-32 place-content-center items-center' onClick={goToAddCourse}>
               <MdAdd className= 'text-4xl'/>
             </button>
-          </Link>
+        
         </li>
       </nav>
     </div>

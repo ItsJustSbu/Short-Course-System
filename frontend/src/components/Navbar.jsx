@@ -8,6 +8,7 @@ import Search from "./Search";
 
 
 
+
 function Navbar() {
  
   
@@ -21,9 +22,6 @@ function Navbar() {
           </div>
           <div>
           <ul className="flex items-end justify-end mr-10">
-      
-
-
               <li>
                   <NavItem svg={home} text={"Home"} link="/home"/>
               </li>
@@ -32,14 +30,14 @@ function Navbar() {
                   <NavItem svg={learning} text={"My Learning"} link="/list"/>
               </li>
               <li>
-                  <NavItem svg={portfolio} text={"Portfolio"} link="#"/>
+                  <NavItem svg={portfolio} text={"Portfolio"} link="/portfolio"/>
               </li>
 
               <li>
-                  <NavItem svg={studio} text={"Studio"} link="/studio"/>
+                  <NavItem svg={studio} text={"Studio"} link="/creater_studio"/>
               </li>
               <li>
-              <NavItem svg={profile} link="#"/>
+                  <NavItem svg={profile} link="/profile"/>
               </li> 
           </ul>
         </div>
