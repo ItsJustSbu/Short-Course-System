@@ -3,12 +3,45 @@ import SendIcon from "@mui/icons-material/Send"
 import RightHandTextComponent from "./RightHandTextComponent";
 import { useState} from "react";
 import ChatWindowComponent from "./ChatWindowCompoent";
+import app from "../../firebase/firebase.js";
+import { getAuth, onAuthStateChanged, signInWithRedirect, GoogleAuthProvider } from "firebase/auth";
+import {doc, setDoc, collection,getFirestore, Timestamp} from "firebase/firestore";
+import LeftHandComponent from "./LeftHandTextComponent";
 
 const TextList = ["this is a text", "this is another text"];
 
 function TextFieldComponent(){
   const [text, setText] = useState("");
+  const [uid, setUid] = useState("");
+
+  //Google Authentication
+
+  const querydb = async () => {
+    const auth = getAuth(app);
+  await onAuthStateChanged(auth, (user)=>{
+    if (user){
+      const id = user.uid;
+      alert(id);
+    const db = getFirestore(app);
+      const newRef = collection(db, "messages");
+   const docRef = doc(newRef);
+     setDoc(docRef,{
+    text: text,
+    UID: id,
+    createdAt: Timestamp.fromDate(new Date())
+  });
+      
+    }
+    else{
+      const provider = new GoogleAuthProvider();
+      signInWithRedirect(auth, provider);
+    }
+  });
+
   
+  
+}
+
 
 
 
@@ -17,7 +50,7 @@ function TextFieldComponent(){
         <div className="relative w-full h-[50vh] bg-[#252e42]">
 
           {/* // This component is used to display the text field */}
-        <ChatWindowComponent RightHandTextComponent={RightHandTextComponent} TextList={TextList}/>
+        <ChatWindowComponent RightHandTextComponent={RightHandTextComponent} LeftHandTextComponent={LeftHandComponent} TextList={TextList}/>
         
 
       {/* // This component is used to display the text field */}
@@ -35,7 +68,7 @@ function TextFieldComponent(){
             TextList.push(text);
             // alert(text);
             setText(""); // This component is used to display the text field
-            
+            querydb();
             }}>
             <SendIcon/>
           </IconButton >
