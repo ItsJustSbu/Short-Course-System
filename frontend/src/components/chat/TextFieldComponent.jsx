@@ -8,7 +8,7 @@ import { getAuth, onAuthStateChanged, signInWithRedirect, GoogleAuthProvider } f
 import {doc, setDoc, collection,getFirestore, Timestamp} from "firebase/firestore";
 import LeftHandComponent from "./LeftHandTextComponent";
 
-const TextList = ["this is a text", "this is another text"];
+
 
 function TextFieldComponent(){
   const [text, setText] = useState("");
@@ -50,7 +50,7 @@ function TextFieldComponent(){
         <div className="relative w-full h-[50vh] bg-[#252e42]">
 
           {/* // This component is used to display the text field */}
-        <ChatWindowComponent RightHandTextComponent={RightHandTextComponent} LeftHandTextComponent={LeftHandComponent} TextList={TextList}/>
+        <ChatWindowComponent RightHandTextComponent={RightHandTextComponent} LeftHandTextComponent={LeftHandComponent}/>
         
 
       {/* // This component is used to display the text field */}
@@ -65,10 +65,10 @@ function TextFieldComponent(){
         <div className="ml-[15px]">
           <IconButton color="purple" onClick={()=>{
             // This component is used to display the text field
-            TextList.push(text);
+            querydb();
             // alert(text);
             setText(""); // This component is used to display the text field
-            querydb();
+            
             }}>
             <SendIcon/>
           </IconButton >
