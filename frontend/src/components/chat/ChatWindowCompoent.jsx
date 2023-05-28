@@ -65,13 +65,12 @@ function ChatWindowComponent(){
 
               {/* // This component is used to display the chat window */}
               {d.data()["UID"]===uid ? <RightHandTextComponent text={d.data()["text"]} /> : <LeftHandComponent text={d.data()["text"]} />}
-              <div ref={dummy}></div>
               
   
             </div>
           ))}
           {/* // This component is used to display the chat window */}
-          
+          <div ref={dummy}></div>
             
         </div>
     )
