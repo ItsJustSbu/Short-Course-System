@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1685290274638" clover="3.2.0">
+  <project timestamp="1685290274638" name="All files">
+    <metrics statements="10" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3" elements="14" coveredelements="12" complexity="0" loc="10" ncloc="10" packages="1" files="1" classes="1"/>
+    <file name="StudioBody.jsx" path="C:\Users\Tebogo\Documents\GitHub\Short-Course-System\frontend\src\components\StudioBody.jsx">
+      <metrics statements="10" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="29" count="1" type="stmt"/>
+      <line num="39" count="1" type="stmt"/>
+      <line num="76" count="7" type="stmt"/>
+      <line num="77" count="6" type="stmt"/>
+      <line num="78" count="1" type="stmt"/>
+      <line num="80" count="6" type="stmt"/>
+      <line num="81" count="0" type="stmt"/>
+      <line num="85" count="6" type="stmt"/>
+      <line num="99" count="18" type="stmt"/>
+    </file>
+  </project>
+</coverage>

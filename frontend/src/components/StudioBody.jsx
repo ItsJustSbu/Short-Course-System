@@ -114,6 +114,7 @@ function StudioBody() {
     
                 <div className="w-4/5 mt-5">
                     <Chart
+                    title="This is a Chart"
                     chartType="Line"
                     width="100%"
                     height="400px"
