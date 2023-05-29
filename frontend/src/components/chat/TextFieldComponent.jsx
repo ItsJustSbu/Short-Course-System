@@ -21,7 +21,7 @@ function TextFieldComponent(){
   await onAuthStateChanged(auth, (user)=>{
     if (user){
       const id = user.uid;
-      alert(id);
+      
     const db = getFirestore(app);
       const newRef = collection(db, "messages");
    const docRef = doc(newRef);

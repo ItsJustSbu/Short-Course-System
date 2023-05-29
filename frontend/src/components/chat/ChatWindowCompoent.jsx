@@ -4,7 +4,7 @@ import app from "../../firebase/firebase.js";
 import RightHandTextComponent from "./RightHandTextComponent.jsx";
 import LeftHandComponent from "./LeftHandTextComponent.jsx";
 import { useState } from "react";
-import { getDocs, getFirestore,query, where,collection, orderBy } from "firebase/firestore";
+import { getDocs, getFirestore,query,collection, orderBy } from "firebase/firestore";
 
 function ChatWindowComponent(){
 
@@ -19,7 +19,7 @@ function ChatWindowComponent(){
   // This component is used to display the chat window
   useEffect(()=>{
     // This component is used to display the chat window
-    dummy.current.scrollIntoView({behavior: "smooth"});
+    // dummy.current.scrollIntoView({behavior: "smooth"});
     querydb();
     
     // This component is used to display the chat window
@@ -60,17 +60,22 @@ function ChatWindowComponent(){
           
              
           {data.map((d)=>(
+
+            
             
             <div key={d.data()["UID"]} className="mb-[10px] snap-center">
+
+              
 
               {/* // This component is used to display the chat window */}
               {d.data()["UID"]===uid ? <RightHandTextComponent text={d.data()["text"]} /> : <LeftHandComponent text={d.data()["text"]} />}
               
+            
   
             </div>
           ))}
           {/* // This component is used to display the chat window */}
-          <div ref={dummy}></div>
+          
             
         </div>
     )
