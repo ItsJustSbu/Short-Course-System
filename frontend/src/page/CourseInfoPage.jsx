@@ -10,7 +10,7 @@ function CourseInfoPage() {
 
   //navabar + courseinfo heading + course scroller
   return (
-    <div>
+    <div className="mb-20">
       <Home></Home>
       <CourseInfoHeading state={state}></CourseInfoHeading>
       <CourseScroller></CourseScroller>

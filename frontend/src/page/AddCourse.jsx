@@ -81,20 +81,17 @@ const AddCourse = () => {
         <textarea className='resize-none w-[500px] rounded-md' placeholder='Enter link address' value={thumbnail} onChange={(e)=>{setThumbnail(e.target.value)}}></textarea>
 
         <h2 className='semibold text-2xl pb-2 pt-8'>Attach Lessons</h2>
-        <div className='flex flex-col gap-4'>
-        {lessons.map((lesson, index) => (
-          <textarea
-            key={index}
-            className='resize-none w-[500px] rounded-md'
-            placeholder='Enter lesson link'
-            value={lesson}
-            onChange={(e) => handleLessonChange(index, e.target.value)}
-          />
-        ))}
-        <button className='text-3xl font-semibold border-2 rounded-md p-2 border-white' onClick={handleAddLesson}>
-          Add Lesson
-        </button>
+        <div className='flex flex-row gap-10 border-2 border-white'>
+          <iframe title="This is a video" className="responsive-video" height="350" width='100%' src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+          <iframe title="This is a video" className="responsive-video" height="350" width='100%' src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
       </div>
+      
+      <h2 className='semibold text-2xl pb-2 pt-8'>Create Quiz</h2>
+      <button className='border w-[120px] h-[40px] rounded-md'>
+        Create Quiz
+        
+        </button>
+       
 
         <div className='pt-8 pb-4'>
           <button className='text-3xl font-semibold border-2 rounded-md p-2 border-white' onClick={querydb}>
