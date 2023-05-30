@@ -1,14 +1,14 @@
 import { useNavigate, Link } from "react-router-dom";
 import { getDocs, getFirestore, query, collection } from "firebase/firestore";
 import { getAuth, signInWithRedirect, GoogleAuthProvider, onAuthStateChanged } from "firebase/auth";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import app from "./firebase/firebase";
 
 function Example() {
   const navigate = useNavigate();
   const [data, setData] = useState([]);
 
-  useEffect(() => {
+
     const fetchData = async () => {
       const auth = getAuth(app);
       const db = getFirestore(app);
@@ -24,7 +24,7 @@ function Example() {
       setData(querySnapshot.docs);
     };
     fetchData();
-  }, [data]);
+  
   const handleClick = (href) => {
     navigate(href);
   };
@@ -41,7 +41,7 @@ function Example() {
             >
               <div
                 className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80"
-                // onClick={() => handleClick('/course-info')}
+                
               >
                 <img
                   src={d.data()["thumbnail"]}
@@ -52,7 +52,7 @@ function Example() {
               <div className="mt-4 flex justify-between">
                 <div>
                   <h3 className="text-sm text-gray-200">
-                  <Link to={{pathname:'/course-info', state: d.data()["courseId"]}}>
+                  <Link to={{ pathname:'/course-info', state: d.data()["courseId"]}}>
                     <span aria-hidden="true" className="absolute inset-0" />
                       {d.data()["title"]}
                     </Link>

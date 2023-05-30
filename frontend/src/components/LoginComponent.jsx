@@ -9,6 +9,7 @@ import {getAuth, signInWithEmailAndPassword, fetchSignInMethodsForEmail, signInW
 
 
 
+
 function LoginComponent(){
 
     const navigate = useNavigate();
@@ -19,13 +20,13 @@ function LoginComponent(){
     const [password, setPassword] = useState('');
     const auth = getAuth(app);
 
-
     const SignInWithGoogle = () =>{
         const provider = new GoogleAuthProvider();
         signInWithPopup(auth, provider).then((result)=>{
             const credential = GoogleAuthProvider.credentialFromResult(result);
             const token = credential.accessToken;
             const user = result.user;
+
             
             navigate("/home", { replace: true });
         }).catch((error)=>{

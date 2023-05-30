@@ -1,8 +1,6 @@
 import { useNavigate} from "react-router";
-import { getDocs, getFirestore, query, collection, updateDoc,doc,arrayUnion} from "firebase/firestore";
-import { getAuth, onAuthStateChanged, signInWithRedirect, GoogleAuthProvider } from "firebase/auth";
-import { useEffect, useState } from "react";
-import app from "../firebase/firebase.js"
+import { getDocs, getFirestore, query, collection} from "firebase/firestore";
+
 
 
 const course = {
@@ -18,63 +16,39 @@ const course = {
 function CourseInfoHeading({state}) {
       // React Router hook for getting state from previous page
       const navigate = useNavigate();
-    const [data, setData] = useState([]);
-    const [user, setUser] = useState("");
-
-    const auth = getAuth(app);
-          const db = getFirestore(app);
-    useEffect(() => {
-
-        const fetchData = async () => {
-          await onAuthStateChanged(auth, (user) => {
-            if (user) {
-                const id = user.uid;
-                setUser(id);
-            } else {
-              const provider = new GoogleAuthProvider();
-              signInWithRedirect(auth, provider);
-            }
-          });
+    // const [data, setData] = useState([]);
+    // const [user, setUser] = useState("");
     
-          const querySnapshot = await getDocs(query(collection(db, "courses", state)));
-          setData(querySnapshot.docs);
-        };
-        fetchData();
-      });
 
-      const handleClick = async (courseId) => {
+      const handleClick = (courseId) => {
 
         //we need to enrol the student into the course
-        await onAuthStateChanged(auth, (user) => {
-            if (user) {
-                const id = user.uid;
-                const userRef = doc(db, "users", id);
-                updateDoc(userRef, {
-            courses: arrayUnion(courseId),
-            });
+        
+            // const id = user.uid;
+            // const userRef = doc(db, "users", id);
+            // updateDoc(userRef, {
+            // coursesEnrolled: arrayUnion(courseId),
+            // });
+            // console.log(data);
             
-            } else {
-              const provider = new GoogleAuthProvider();
-              signInWithRedirect(auth, provider);
-            }
-          });
+            
         
         
 
         navigate("/course-info", { state: courseId });
-        window.history.clearHistory(); // Clear the navigation stack
+    
         };
 
     return (
         <>
         <div className="h-72 bg-course-background bg-no-repeat bg-right bg-contain pl-5 mt-[50px] border-top mb-[150px]" >
-            {data.map((d)=>(
+            
                 <div>
-                <h1 className="text-7xl pt-[20px] ">{d.data()["title"]}</h1>
+                <h1 className="text-7xl pt-[20px] ">{course.name}</h1>
                 <h3 className="mb-[70px] w-4/5">{course.author}</h3> 
-                <h4 className="mb-[70px] w-4/5">{d.data()["description"]}</h4> 
+                <h4 className="mb-[70px] w-4/5">{course.description}</h4> 
                 </div>
-            ))}
+
             
             <button className="border px-9 py-2 border-gray-blue-100 text-gray-100 rounded-xl" onClick={handleClick(state)}>Enroll</button>
 
