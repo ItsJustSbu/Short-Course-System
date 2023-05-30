@@ -1,9 +1,10 @@
 import { Input, Button } from "@material-tailwind/react";
-import {React, useContext, useState} from "react";
+import {React, useState} from "react";
 import { useNavigate } from "react-router-dom";
 import app from "../firebase/firebase.js";
 import google from "../assets/icons8-google.svg"
 import {getAuth, signInWithEmailAndPassword, fetchSignInMethodsForEmail, signInWithPopup, GoogleAuthProvider} from "firebase/auth";
+
 
 
 
@@ -19,14 +20,14 @@ function LoginComponent(){
     const [password, setPassword] = useState('');
     const auth = getAuth(app);
 
-
     const SignInWithGoogle = () =>{
         const provider = new GoogleAuthProvider();
         signInWithPopup(auth, provider).then((result)=>{
             const credential = GoogleAuthProvider.credentialFromResult(result);
             const token = credential.accessToken;
             const user = result.user;
-            console.log(user);
+
+            
             navigate("/home", { replace: true });
         }).catch((error)=>{
             const errorCode = error.code;

@@ -36,10 +36,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "CI=false && react-scripts build",
-    "test": "react-scripts test --coverage",
+    "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "run": "nodemon ./server.js --exec babel-node",
-    "test:coverage": "jest --coverage --watchAll"
+    "run": "nodemon ./server.js --exec babel-node"
   },
   "eslintConfig": {
     "extends": [
@@ -63,6 +62,7 @@
     "@babel/preset-env": "^7.21.4",
     "@testing-library/jest-dom": "^5.16.5",
     "codecov": "^3.8.3",
+    "coveralls": "^3.1.1",
     "jest": "^27.5.1",
     "tailwindcss": "^3.3.1"
   }

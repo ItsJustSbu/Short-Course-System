@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { getAuth, onAuthStateChanged, GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
 import app from "../../firebase/firebase.js";
 import RightHandTextComponent from "./RightHandTextComponent.jsx";
@@ -9,7 +9,7 @@ import { getDocs, getFirestore,query,collection, orderBy } from "firebase/firest
 function ChatWindowComponent(){
 
   // This component is used to display the chat window
-    const dummy = useRef(null);
+    
     const [uid, setUid] = useState("");
     const [data, setData] = useState([]);
     //collects the uid so that we can use it to display the chat window
@@ -23,7 +23,7 @@ function ChatWindowComponent(){
     querydb();
     
     // This component is used to display the chat window
-  },[data]);
+  });
   
   //Google Authentication
   const auth = getAuth(app);
@@ -43,6 +43,7 @@ function ChatWindowComponent(){
 
     const querySnapshot = await getDocs(query(collection(db,"messages"),orderBy("createdAt","asc")));
     setData(querySnapshot.docs);
+
       
     
   }
