@@ -1,9 +1,16 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, useNavigate } from 'react-router-dom';
 import Courses from '../page/Courses';
 import '@testing-library/jest-dom';
 
+jest.mock('react-router-dom', () => {
+  const originalModule = jest.requireActual('react-router-dom');
+  return {
+    ...originalModule,
+    useNavigate: jest.fn(),
+  };
+});
 
 describe('Courses', () => {
 
@@ -28,21 +35,18 @@ describe('Courses', () => {
     expect(courseDescriptions[1]).toHaveTextContent("Second Course with a passionate smile that asks the important question of what's in the box, what is what's in the box worth?");
   });
   
-//   test('navigates to AddCourse page when add button is clicked', () => {
-//     // Mock the useNavigate function
-//     const navigateMock = jest.fn();
-//     jest.mock('react-router-dom', () => ({
-//       ...jest.requireActual('react-router-dom'),
-//       useNavigate: () => navigateMock,
-//     }));
+  test('navigates to AddCourse page when add button is clicked', () => {
+    // Mock the useNavigate function
+    const mockNavigate = jest.fn();
+    useNavigate.mockReturnValue(mockNavigate);
     
-//     render(<Courses />);
+    render(<Courses />);
     
-//     // Simulate clicking the add button
-//     const addButton = screen.getByTestId('add-button');
-//     addButton.click();
+    // Simulate clicking the add button
+    const addButton = screen.getByTestId('add-button');
+    addButton.click();
     
-//     // Assert that the navigate function is called with the correct path
-//     expect(navigateMock).toHaveBeenCalledWith('/AddCourse');
-//   });
+    // Assert that the navigate function is called with the correct path
+    expect(mockNavigate).toHaveBeenCalledWith('/AddCourse');
+  });
 });
