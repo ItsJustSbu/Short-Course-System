@@ -19,7 +19,7 @@ function ChatWindowComponent(){
   // This component is used to display the chat window
   useEffect(()=>{
     // This component is used to display the chat window
-    dummy.current.scrollIntoView({behavior: "smooth"});
+    // dummy.current.scrollIntoView({behavior: "smooth"});
     querydb();
     
     // This component is used to display the chat window

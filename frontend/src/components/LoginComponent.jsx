@@ -38,17 +38,24 @@ function LoginComponent(){
         })
     }
 
-    
-    const handleSubmit = (e) => {
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
         
         // Checks if a user exists
-        fetchSignInMethodsForEmail(auth, email).then((signInMethods)=>{
-            if (signInMethods.length === 0){
-                alert('User does not exist');
-                navigate("/register", { replace: true });
+        try {
+            const signInMethods = await auth.fetchSignInMethodsForEmail(email);
+            console.log(signInMethods);
+      
+            if (signInMethods.length === 0) {
+              alert('User does not exist');
+              navigate("/register", { replace: true });
             }
-        })
+          } catch (error) {
+            console.error(error);
+          }
+        
+        // console.log(fetchSignInMethodsForEmail(auth, email).result);
 
         //Signs in a user that does exist
         signInWithEmailAndPassword(auth, email,password).then((userCredential)=>{
@@ -68,6 +75,7 @@ function LoginComponent(){
 
     const handleRegisterClick = () => {
         navigate("/register", { replace: true });
+        
       };
 
 
@@ -75,8 +83,8 @@ function LoginComponent(){
         <form className="ml-[250px] mt-[200px] w-80 max-w-screen-lg sm:w-96" onSubmit={e=>handleSubmit(e)}>
             <div className="flex flex-col w-72 gap-6">
             
-            <Input variant="outlined" color="purple" size="lg" label="email" value={email} onChange={e =>setEmail(e.target.value)} />
-            <Input variant="outlined" color="purple" size="lg" label="password" type="password" value={password} onChange={e =>setPassword(e.target.value)}/> 
+            <Input variant="outlined" color="purple" size="lg" label="email" value={email} onChange={e =>setEmail(e.target.value) } data-testid="Email" />
+            <Input variant="outlined" color="purple" size="lg" label="password" type="password" value={password} onChange={e =>setPassword(e.target.value)} data-testid="Password"/> 
                   
             </div>
             <div className="flex w-max"> 
@@ -87,11 +95,12 @@ function LoginComponent(){
             color="purple"
              className="ml-[0px] mt-6 flex-1"
              type="submit"
+             data-testid="LoginButton"
               >
                 Login
             </Button>
             
-            <Button variant="text" className="flex-1 mt-6" onClick={handleRegisterClick}>
+            <Button variant="text" className="flex-1 mt-6" onClick={handleRegisterClick} data-testid="Button" >
                 Dont have an account
             </Button>
 
@@ -115,4 +124,6 @@ function LoginComponent(){
     )
 }
 
+
 export default LoginComponent;
+

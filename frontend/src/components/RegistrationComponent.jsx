@@ -77,10 +77,10 @@ function RegistrationComponent(){
         return(
             <form className="ml-[120px] mt-[150px] w-80 max-w-screen-lg sm:w-96" onSubmit={e =>handleSubmit(e)}>
                 <div className="flex flex-col w-72 gap-6">
-                <Input variant="outlined" color="purple" size="lg" label="Name" onChange={e=>setName(e.target.value)} value={name} />
-                <Input variant="outlined" color="purple" size="lg" label="email" onChange={e=>setEmail(e.target.value)} value={email}/>
-                <Input variant="outlined" color="purple" size="lg" label="password" type="password" onChange={e=>setPassword(e.target.value)} value={password}/>       
-                <Input variant="outlined" color="purple" size="lg" label ="confirm password" type="password" onChange={e=>setConfirmPassword(e.target.value)} value={confirmPassword}/>
+                <Input variant="outlined" color="purple" size="lg" label="Name" onChange={e=>setName(e.target.value)} value={name} data-testid="Name" />
+                <Input variant="outlined" color="purple" size="lg" label="email" onChange={e=>setEmail(e.target.value)} value={email} data-testid="Email"/>
+                <Input variant="outlined" color="purple" size="lg" label="password" type="password" onChange={e=>setPassword(e.target.value)} value={password} data-testid="Password"/>       
+                <Input variant="outlined" color="purple" size="lg" label ="confirm password" type="password" onChange={e=>setConfirmPassword(e.target.value)} value={confirmPassword} data-testid="CPassword"/>
                 </div>
                 <div className="flex w-max">
     

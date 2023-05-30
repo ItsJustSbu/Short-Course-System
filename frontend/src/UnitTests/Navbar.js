@@ -30,3 +30,21 @@ test('renders navbar with correct navigation items', () => {
     expect(studioElement).toBeInTheDocument();
 
 });
+
+// import { render, screen } from '@testing-library/react';
+// import Navbar from '../components/Navbar';
+
+// describe('Navbar', () => {
+//   test('renders navbar items correctly', () => {
+//     render(<Navbar />);
+    
+//     // Assert that the navbar items are rendered correctly
+//     expect(screen.getByText('Home')).toBeInTheDocument();
+//     expect(screen.getByText('My Learning')).toBeInTheDocument();
+//     expect(screen.getByText('Portfolio')).toBeInTheDocument();
+//     expect(screen.getByText('Studio')).toBeInTheDocument();
+//     expect(screen.getByAltText('Profile')).toBeInTheDocument();
+//   });
+
+//   // Add more test cases as needed to cover other aspects of the Navbar component
+// });
