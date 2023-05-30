@@ -112,9 +112,9 @@ function StudioBody() {
             <div className="border w-[750px] rounded-md text-center pt-10 font-bold text-xl flex flex-col justify-center items-center">
                 Creater Analytics
     
-                <div className="w-4/5 mt-5">
+                <div className="w-4/5 mt-5" >
                     <Chart
-                    title="This is a Chart"
+                    data-testid="This is a Chart"
                     chartType="Line"
                     width="100%"
                     height="400px"

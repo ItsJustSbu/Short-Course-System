@@ -14,7 +14,7 @@ var CourseList = [
 
   },
   {
-      name: 'Intro to Ergonomics',
+      name: 'Intro to Ergonomics+',
       author: "Michael Mkhize",
       description:"Second Course with a passionate smile that asks the important question of what's in the box, what is what's in the box worth?",
       imageUrl:
@@ -35,13 +35,13 @@ const Courses = () => {
       <div className="w-11/12 place-content-center bg-transparent">
         {CourseList.map((course) => (
 
-          <div key={course.author} className="gap-x-6 py-5 pb-6 mb-7 border-2 border-blue-gray-200 rounded-xl content-center " >
+          <div key={course.author} className="gap-x-6 py-5 pb-6 mb-7 border-2 border-blue-gray-200 rounded-xl content-center " data-testid="course">
             <div className="flex gap-x-4 h-35 max-w-35 content-center">
                 <img className="flex-none rounded-md h-35 w-25 bg-gray-50" src={course.imageUrl} alt="" />
                 <div className="min-w-0 w-4/5">
                     <div className="h-3/5">
-                        <p className="text-5xl font-semibold leading-6 text-blue-gray-200 mb-5 mt-9">{course.name}</p>
-                        <p className="text-2xl mt-1 leading-5 text-blue-gray-300 ">{course.description}</p>
+                        <p className="text-5xl font-semibold leading-6 text-blue-gray-200 mb-5 mt-9" data-testid="course-name">{course.name}</p>
+                        <p className="text-2xl mt-1 leading-5 text-blue-gray-300 " data-testid="course-description">{course.description}</p>
                           
                     </div>
                     <div className=" text-blue-gray-200 ">
