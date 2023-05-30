@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import app from "../firebase/firebase.js";
 import google from "../assets/icons8-google.svg"
 import { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { getFirestore, setDoc, doc } from "firebase/firestore";
 
 
 
@@ -18,8 +19,9 @@ function RegistrationComponent(){
     const [confirmPassword, setConfirmPassword] = useState('');
 
     const auth = getAuth(app);
+    const db = getFirestore(app);
     
-    const handleSubmit = (e) =>{
+    const handleSubmit = async (e) =>{
         e.preventDefault();
         if(password !== confirmPassword){
             alert("Passwords do not match");
@@ -38,12 +40,22 @@ function RegistrationComponent(){
         .then((userCredential) => {
                 // Signed in 
                 const user = userCredential.user;
-                console.log(user);
+                const userid = user.uid;
+
+                // Add a new document with a generated id.
+                setDoc(doc(db, "users", userid), {
+                    name: name,
+                    email: email,
+                    userid: userid,
+                    coursesEnrolled: [],
+                });
+                
+                // if the user is signed in, redirect to home page
                 navigate("/home", { replace: true });
-                // ...
+                
         })
         .catch((error) => {
-                const errorCode = error.code;
+                
                 const errorMessage = error.message;
                 alert(`Error: ${errorMessage}`);
                 // ..
@@ -57,10 +69,16 @@ function RegistrationComponent(){
         const registerWithGoogle = () =>{
             const provider = new GoogleAuthProvider();
             signInWithPopup(auth, provider).then((result)=>{
-                const credential = GoogleAuthProvider.credentialFromResult(result);
-                const token = credential.accessToken;
+                
                 const user = result.user;
-                console.log(user);
+                const userId = user.uid;
+                setDoc(doc(db, "users", userId), {
+                    name: user.displayName,
+                    email: user.email,
+                    userid: userId,
+                    coursesEnrolled: [],
+                });
+
                 navigate("/home", { replace: true });
             }).catch((error)=>{
                 const errorCode = error.code;

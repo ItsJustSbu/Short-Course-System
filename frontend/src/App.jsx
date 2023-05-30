@@ -22,6 +22,7 @@ import ProfilePage from "./page/ProfilePage";
 import QuizPage from "./page/QuizPage";
 
 import CreaterStudio from "./page/CreaterStudio"
+import CreateQuiz from "./page/CreateQuiz";
 
 
 function App() {
@@ -44,7 +45,7 @@ function App() {
       <Route path="/course-info" element={<CourseInfoPage />} />
       <Route path="/quiz-page" element={<QuizPage/>} />
 
-            
+      <Route path="/create-quiz" element={<CreateQuiz/>} />     
       
       <Route path="/portfolio" element={<PortfolioPage/>} />
       {/* These are routes for the studio page nested 
@@ -62,7 +63,8 @@ function App() {
           <Route path="/AddCourse" element={<AddCourse />} />
           <Route path="/Courses" element={<Courses />}/>
 
-    </Routes>
+        </Routes>
+        
     </MyContext.Provider>
     </>
     
