@@ -1,8 +1,17 @@
-import React from 'react'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const AddCourse = () => {
+  const navigate = useNavigate();
+    const goToQuiz = () => {
+        navigate('/create-quiz');
+    };
   return (
+    
+  
+
     <div className=' flex flex-col pl-2 text-light-purple'>
+        
         <h1 className='bold text-4xl pb-8'>Edit Course</h1>
         
         <h2 className='semibold text-2xl'>What will you call this Course?</h2>
@@ -32,7 +41,7 @@ const AddCourse = () => {
       </div>
       
       <h2 className='semibold text-2xl pb-2 pt-8'>Create Quiz</h2>
-      <button className='border w-[120px] h-[40px] rounded-md'>
+      <button className='border w-[120px] h-[40px] rounded-md' onClick={goToQuiz}>
         Create Quiz
         
         </button>
