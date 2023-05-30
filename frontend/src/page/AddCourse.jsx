@@ -34,6 +34,7 @@ const AddCourse = () => {
       const newRef = collection(db, "courses");
    const docRef = doc(newRef);
      setDoc(docRef,{
+    courseId : docRef.id,
     audience : audience,
     description : description,
     lessons : lessons,

@@ -1,4 +1,9 @@
-import { useNavigate, useLocation } from "react-router";
+import { useNavigate} from "react-router";
+import { getDocs, getFirestore, query, collection, updateDoc,doc,arrayUnion} from "firebase/firestore";
+import { getAuth, onAuthStateChanged, signInWithRedirect, GoogleAuthProvider } from "firebase/auth";
+import { useEffect, useState } from "react";
+import app from "../firebase/firebase.js"
+
 
 const course = {
         name: 'Introduction to Ergonomics',
@@ -10,24 +15,72 @@ const course = {
 
     }
 
-function CourseInfoHeading() {
-    const navigate = useNavigate();  // React Router hook for navigation
-    const {state} = useLocation();   // React Router hook for getting state from previous page
+function CourseInfoHeading({state}) {
+      // React Router hook for getting state from previous page
+      const navigate = useNavigate();
+    const [data, setData] = useState([]);
+    const [user, setUser] = useState("");
+
+    const auth = getAuth(app);
+          const db = getFirestore(app);
+    useEffect(() => {
+
+        const fetchData = async () => {
+          await onAuthStateChanged(auth, (user) => {
+            if (user) {
+                const id = user.uid;
+                setUser(id);
+            } else {
+              const provider = new GoogleAuthProvider();
+              signInWithRedirect(auth, provider);
+            }
+          });
+    
+          const querySnapshot = await getDocs(query(collection(db, "courses", state)));
+          setData(querySnapshot.docs);
+        };
+        fetchData();
+      });
+
+      const handleClick = async (courseId) => {
+
+        //we need to enrol the student into the course
+        await onAuthStateChanged(auth, (user) => {
+            if (user) {
+                const id = user.uid;
+                const userRef = doc(db, "users", id);
+                updateDoc(userRef, {
+            courses: arrayUnion(courseId),
+            });
+            
+            } else {
+              const provider = new GoogleAuthProvider();
+              signInWithRedirect(auth, provider);
+            }
+          });
+        
+        
+
+        navigate("/course-info", { state: courseId });
+        window.history.clearHistory(); // Clear the navigation stack
+        };
+
     return (
-        
-        // This layout component is used to display the course information on the course info page
-        // The course information is passed as props from the course info page
-        
+        <>
         <div className="h-72 bg-course-background bg-no-repeat bg-right bg-contain pl-5 mt-[50px] border-top mb-[150px]" >
-            <h1 className="text-7xl pt-[20px] ">{course.name}</h1>
-            <h3 className="mb-[70px] w-4/5">{course.author}</h3> 
-            <h4 className="mb-[70px] w-4/5">{course.description}</h4> 
-            <button className="border px-9 py-2 border-gray-blue-100 text-gray-100 rounded-xl" onClick={()=>(navigate('/watch', {
-                state
-            }))}>Enroll</button>
+            {data.map((d)=>(
+                <div>
+                <h1 className="text-7xl pt-[20px] ">{d.data()["title"]}</h1>
+                <h3 className="mb-[70px] w-4/5">{course.author}</h3> 
+                <h4 className="mb-[70px] w-4/5">{d.data()["description"]}</h4> 
+                </div>
+            ))}
+            
+            <button className="border px-9 py-2 border-gray-blue-100 text-gray-100 rounded-xl" onClick={handleClick(state)}>Enroll</button>
 
 
         </div>
+        </>
     )
 }
 

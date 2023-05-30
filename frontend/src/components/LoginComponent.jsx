@@ -1,5 +1,5 @@
 import { Input, Button } from "@material-tailwind/react";
-import {React, useContext, useState} from "react";
+import {React, useState} from "react";
 import { useNavigate } from "react-router-dom";
 import app from "../firebase/firebase.js";
 import google from "../assets/icons8-google.svg"
@@ -26,7 +26,7 @@ function LoginComponent(){
             const credential = GoogleAuthProvider.credentialFromResult(result);
             const token = credential.accessToken;
             const user = result.user;
-            console.log(user);
+            
             navigate("/home", { replace: true });
         }).catch((error)=>{
             const errorCode = error.code;
