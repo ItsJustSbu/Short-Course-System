@@ -20,6 +20,6 @@ module.exports = {
       '!src/registerServiceWorker.js',
     ],
     "verbose": true,
-    "maxWorkers": 4
+    "maxWorkers": 1
   };
   
