@@ -1,23 +1,30 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
-import { MemoryRouter } from "react-router-dom";
-import CoursesGrid from "./CoursesGrid";
+import { Bro, BrowserRouter, useNavigate } from "react-router-dom";
+import CoursesGrid from "../CoursesGrid";
 import '@testing-library/jest-dom';
 
+jest.mock('react-router-dom', () => {
+  const originalModule = jest.requireActual('react-router-dom');
+  return {
+    ...originalModule,
+    useNavigate: jest.fn(),
+  };
+});
+
 describe("CoursesGrid", () => {
+  window.HTMLElement.prototype.scrollIntoView = function() {};
   test("renders CoursesGrid component", () => {
-    const navigateMock = jest.fn();
-    const useContextMock = jest.spyOn(React, "useContext");
-    useContextMock.mockReturnValue({ user: null });
+    const mockNavigate = jest.fn();
+    useNavigate.mockReturnValue(mockNavigate);
 
     const { getByText, getByAltText } = render(
-      <MemoryRouter>
         <CoursesGrid />
-      </MemoryRouter>
+
     );
 
     // Check if product names are rendered
-    expect(getByText("Introduction to React.js")).toBeInTheDocument();
+    expect(getByText("Introduction tonm React.js")).toBeInTheDocument();
 
     // Check if product colors are rendered
     expect(getByText("Dr Sarah Kapay")).toBeInTheDocument();

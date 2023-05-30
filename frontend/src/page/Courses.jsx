@@ -61,7 +61,7 @@ const Courses = () => {
       <nav className='pb-9 '>
         <li>
           
-            <button className='flex border-white border-2 rounded-md h-16 w-32 place-content-center items-center' onClick={goToAddCourse}>
+            <button className='flex border-white border-2 rounded-md h-16 w-32 place-content-center items-center' data-testid="" onClick={goToAddCourse}>
               <MdAdd className= 'text-4xl'/>
             </button>
         
