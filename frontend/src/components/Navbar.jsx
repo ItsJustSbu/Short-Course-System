@@ -9,42 +9,46 @@ import Search from "./Search";
 
 
 
+
 function Navbar() {
+
+  
  
   
   return (
 
+    
+      <nav>
+          <div className='grid grid-cols-2 gap-2'>
+            <div className='flex items-center justify-center '>
+            <Search />
+            </div>
+            <div>
+            <ul className="flex items-end justify-end mr-10">
+                <li>
+                    <NavItem svg={home} text={"Home"} link="/home"/>
+                </li>
 
-    <nav>
-        <div className='grid grid-cols-2 gap-2'>
-          <div className='flex items-center justify-center '>
-          <Search />
+                <li>
+                    <NavItem svg={learning} text={"My Learning"} link="/list"/>
+                </li>
+                <li>
+                    <NavItem svg={portfolio} text={"Portfolio"} link="/portfolio"/>
+                </li>
+
+                <li>
+                    <NavItem svg={studio} text={"Studio"} link="/creater_studio"/>
+                </li>
+                <li>
+                    <NavItem svg={profile} link="/profile"/>
+                </li> 
+            </ul>
           </div>
-          <div>
-          <ul className="flex items-end justify-end mr-10">
-              <li>
-                  <NavItem svg={home} text={"Home"} link="/home"/>
-              </li>
-
-              <li>
-                  <NavItem svg={learning} text={"My Learning"} link="/list"/>
-              </li>
-              <li>
-                  <NavItem svg={portfolio} text={"Portfolio"} link="/portfolio"/>
-              </li>
-
-              <li>
-                  <NavItem svg={studio} text={"Studio"} link="/creater_studio"/>
-              </li>
-              <li>
-                  <NavItem svg={profile} link="/profile"/>
-              </li> 
-          </ul>
         </div>
-      </div>
+          
         
-      
-    </nav>
+      </nav>
+    
   );
 }
 
