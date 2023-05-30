@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import app from '../firebase/firebase';
 import { getAuth, signInWithRedirect, GoogleAuthProvider, onAuthStateChanged } from "firebase/auth";
 import { getFirestore, collection,doc,setDoc,Timestamp } from "firebase/firestore";
+import { useNavigate } from 'react-router-dom';
 
 const AddCourse = () => {
   const [lessons, setLessons] = useState([''])
@@ -10,7 +11,10 @@ const AddCourse = () => {
   const [requirements, setRequirements] = useState('')
   const [audience, setAudience] = useState('')
   const [thumbnail, setThumbnail] = useState('')
-
+  const navigate = useNavigate();
+  const goToQuiz = () => {
+       navigate('/create-quiz');
+   };
 
   const handleAddLesson = () => {
     setLessons([...lessons, ''])
@@ -87,7 +91,7 @@ const AddCourse = () => {
       </div>
       
       <h2 className='semibold text-2xl pb-2 pt-8'>Create Quiz</h2>
-      <button className='border w-[120px] h-[40px] rounded-md'>
+      <button className='border w-[120px] h-[40px] rounded-md' onClick={goToQuiz}>
         Create Quiz
         
         </button>
