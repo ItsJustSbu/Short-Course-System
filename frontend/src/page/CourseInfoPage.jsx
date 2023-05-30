@@ -42,7 +42,6 @@ function CourseInfoPage() {
   // console.log(data[0]);
   //navabar + courseinfo heading + course scroller
   return (
-    
     <div>
       <Home></Home>
       <CourseInfoHeading state={location}></CourseInfoHeading>
