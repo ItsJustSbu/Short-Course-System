@@ -114,7 +114,7 @@ function StudioBody() {
     
                 <div className="w-4/5 mt-5" >
                     <Chart
-                    data-testid="This is a Chart"
+                    name="This is a Chart"
                     chartType="Line"
                     width="100%"
                     height="400px"
