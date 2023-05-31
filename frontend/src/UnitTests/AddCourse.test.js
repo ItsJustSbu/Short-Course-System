@@ -7,7 +7,7 @@ import '@testing-library/jest-dom';
 test('renders AddCourse component', () => {
 
     window.HTMLElement.prototype.scrollIntoView = function() {};
-
+//ter
   render(
     <BrowserRouter>
         <AddCourse/>
