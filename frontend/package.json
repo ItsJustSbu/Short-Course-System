@@ -36,11 +36,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "CI=false && react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --coverage",
     "eject": "react-scripts eject",
 
-    "run": "nodemon ./server.js --exec babel-node",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
     "run": "nodemon ./server.js --exec babel-node"
   },
   "eslintConfig": {
