@@ -8,10 +8,10 @@ import VideoPage from './page/VideoPage';
 import MyLearning from './page/MyLearning';
 import CourseInfoPage from "./page/CourseInfoPage";
 import Lessons from "./page/Lessons";
-import MyContext from "./MyContext";
+
 import PortfolioPage from "./page/PortfolioPage";
 
-import Studio from "./layouts/Studio";
+
 import Dashboard from "./page/Dashboard";
 import Courses from "./page/Courses";
 import Quizzes from "./page/Quizzes";
@@ -30,7 +30,7 @@ function App() {
 
   return (
     <>
-    <MyContext.Provider value={{user, setUser}}>
+    
     <Routes>
       {/*These are the routes for the main app */}
       <Route path="/" element={<Navigate to ="/login" />} />
@@ -51,7 +51,7 @@ function App() {
       {/* These are routes for the studio page nested 
       inside the studio layout
       */}
-      <Route path="/studio" element={<Studio/>}>
+      <Route>
         <Route path="Dashboard/" element={<Dashboard />}/>
         <Route path="Courses/" element={<Courses />}/>
         <Route path="Quizzes/" element={<Quizzes />}/>
@@ -65,7 +65,7 @@ function App() {
 
         </Routes>
         
-    </MyContext.Provider>
+  
     </>
     
   )

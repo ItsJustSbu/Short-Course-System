@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/36</span>
+                <span class='fraction'>0/35</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/36</span>
+                <span class='fraction'>0/35</span>
             </div>
         
             
@@ -180,7 +180,8 @@
 <a name='L115'></a><a href='#L115'>115</a>
 <a name='L116'></a><a href='#L116'>116</a>
 <a name='L117'></a><a href='#L117'>117</a>
-<a name='L118'></a><a href='#L118'>118</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -191,24 +192,25 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -298,11 +300,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Input, Button } from "@material-tailwind/react";
-import {React, useContext, useState} from "react";
+import {React, useState} from "react";
 import { useNavigate } from "react-router-dom";
 import app from "../firebase/firebase.js";
 import google from "../assets/icons8-google.svg"
 import {getAuth, signInWithEmailAndPassword, fetchSignInMethodsForEmail, signInWithPopup, GoogleAuthProvider} from "firebase/auth";
+&nbsp;
 &nbsp;
 &nbsp;
 &nbsp;
@@ -318,14 +321,14 @@ function <span class="fstat-no" title="function not covered" >LoginComponent(</s
     const [password, setPassword] = <span class="cstat-no" title="statement not covered" >useState('');</span>
     const auth = <span class="cstat-no" title="statement not covered" >getAuth(app);</span>
 &nbsp;
-&nbsp;
     const SignInWithGoogle = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >()</span> =&gt;{</span>
         const provider = <span class="cstat-no" title="statement not covered" >new GoogleAuthProvider();</span>
 <span class="cstat-no" title="statement not covered" >        signInWithPopup(auth, provider).then(<span class="fstat-no" title="function not covered" >(r</span>esult)=&gt;{</span>
             const credential = <span class="cstat-no" title="statement not covered" >GoogleAuthProvider.credentialFromResult(result);</span>
             const token = <span class="cstat-no" title="statement not covered" >credential.accessToken;</span>
             const user = <span class="cstat-no" title="statement not covered" >result.user;</span>
-<span class="cstat-no" title="statement not covered" >            console.log(user);</span>
+&nbsp;
+            
 <span class="cstat-no" title="statement not covered" >            navigate("/home", { replace: true });</span>
         }).catch(<span class="fstat-no" title="function not covered" >(e</span>rror)=&gt;{
             const errorCode = <span class="cstat-no" title="statement not covered" >error.code;</span>
@@ -421,7 +424,7 @@ export default LoginComponent;</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-05-30T18:07:37.544Z
+                at 2023-05-31T03:12:38.505Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

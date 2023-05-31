@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -172,7 +172,7 @@
 <a name='L107'></a><a href='#L107'>107</a>
 <a name='L108'></a><a href='#L108'>108</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -181,7 +181,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -189,7 +189,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -230,7 +230,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -243,11 +243,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">48x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -279,7 +279,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
 &nbsp;
-const course = <span class="cstat-no" title="statement not covered" >{</span>
+const course = {
     name: 'Intro to Ergonomics',
     author: "Michael Mkhize",
     description: "Become a Python Programmer and learn one of employer's most requested skills of 2023! This is the most comprehensive, yet straight-forward, course for the Python programming language on Udemy! Whether you have never programmed before, already know basic syntax, or want to learn about the advanced features of Python, this course is for you! In this course we will teach you Python 3.With over 100 lectures and more than 21 hours of video this comprehensive course leaves no stone unturned! This course includes quizzes, tests, coding exercises and homework assignments as well as 3 major projects to create a Python project portfolio!",
@@ -288,7 +288,7 @@ const course = <span class="cstat-no" title="statement not covered" >{</span>
     progress: 50   
 }
 &nbsp;
-const quiz = <span class="cstat-no" title="statement not covered" >{</span>
+const quiz = {
     name: 'Quiz 1',
     points: 30,
     time_allocation: 60,
@@ -296,7 +296,7 @@ const quiz = <span class="cstat-no" title="statement not covered" >{</span>
     instructions: "The class attribute in the div element has been changed to className, which is the correct syntax for JSX. The keys for the inner map function have been changed to use the index of the map function, ensuring a unique key for each element. The htmlFor attribute has been added to associate each label with its corresponding checkbox. It uses a unique identifier generated using the question number and answer index to ensure uniqueness. The indentation has been adjusted for better code readability. With these changes, the code should work correctly, rendering the quiz questions and their potential answers as checkboxes."
 }
 &nbsp;
-const quiz_questions = <span class="cstat-no" title="statement not covered" >[</span>
+const quiz_questions = [
     {
         question_number: 1,
         question: "What is the point of ergonomics?",
@@ -336,8 +336,8 @@ const quiz_questions = <span class="cstat-no" title="statement not covered" >[</
 ]
 &nbsp;
 &nbsp;
-function <span class="fstat-no" title="function not covered" >AddQuestions(</span>) {
-<span class="cstat-no" title="statement not covered" >    return (</span>
+function AddQuestions() {
+    return (
         &lt;div className="pb-32"&gt;
             &lt;div className="flex items-center flex-col"&gt;
                 &lt;h1 className="text-center text-4xl mt-9"&gt;{course.name}&lt;/h1&gt;
@@ -348,13 +348,13 @@ function <span class="fstat-no" title="function not covered" >AddQuestions(</spa
 &nbsp;
             &lt;div class="flex justify-center pt-9 "&gt;
             &lt;ul role="list" className="w-11/12 place-content-center bg-transparent border-2 border-blue-gray-200 rounded-lg"&gt;
-                {quiz_questions.map(<span class="fstat-no" title="function not covered" >(q</span>uestion) =&gt; (
+                {quiz_questions.map((question) =&gt; (
                     // This component is used to display the text on the coourses in a grid
-<span class="cstat-no" title="statement not covered" >                    &lt;li key={question.question_number} className="gap-x-6 py-5 pb-6 mb-7  content-center " &gt;</span>
+                    &lt;li key={question.question_number} className="gap-x-6 py-5 pb-6 mb-7  content-center " &gt;
                         &lt;div&gt;
                             &lt;h1 className="text-2xl mb-5 ml-3 "&gt;{question.question_number}. {question.question}&lt;/h1&gt;
-                            {question.poetential_answers.map(<span class="fstat-no" title="function not covered" >(a</span>nswer, index) =&gt; (
-<span class="cstat-no" title="statement not covered" >                                &lt;div className="ml-10 mb-1" key={index}&gt;</span>
+                            {question.poetential_answers.map((answer, index) =&gt; (
+                                &lt;div className="ml-10 mb-1" key={index}&gt;
                                     &lt;input
                                         type="checkbox"
                                         id={`question-${question.question_number}-answer-${index}`}
@@ -391,7 +391,7 @@ export default AddQuestions;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-05-30T18:07:37.544Z
+                at 2023-05-31T03:12:38.505Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

@@ -40,8 +40,8 @@
     "eject": "react-scripts eject",
 
     "run": "nodemon ./server.js --exec babel-node",
-    "test:coverage": "jest --coverage"
-    "run": "nodemon ./server.js --exec babel-node"
+    "test:coverage": "jest --coverage --watchAll"
+    
   },
   "eslintConfig": {
     "extends": [
